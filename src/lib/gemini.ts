@@ -3,7 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 
 export async function analyzeSkin(imageBase64: string, mimeType: string) {
-  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
   const prompt = `You are a professional dermatologist AI assistant for a skincare app called "Glow Log".
   Analyze this skin photo and provide a detailed assessment. Return ONLY valid JSON with this exact structure:
@@ -38,7 +38,7 @@ export async function analyzeSkin(imageBase64: string, mimeType: string) {
 }
 
 export async function getRoutineAdvice(skinType: string, concerns: string[]) {
-  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
   const prompt = `You are a skincare expert for "Glow Log" app.
   Given skin type: ${skinType} and concerns: ${concerns.join(", ")},
