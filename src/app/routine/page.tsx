@@ -17,18 +17,18 @@ import {
 import type { RoutineEntry, RoutineStep } from "@/types";
 
 const DEFAULT_MORNING_STEPS = [
-  "Temizleyici",
-  "Tonik",
+  "Cleanser",
+  "Toner",
   "Serum",
-  "Nemlendirici",
-  "Dayes Kremi",
+  "Moisturizer",
+  "Sunscreen",
 ];
 const DEFAULT_EVENING_STEPS = [
-  "Makyaj Temizleyici",
-  "Temizleyici",
-  "Tonik",
+  "Makeup Remover",
+  "Cleanser",
+  "Toner",
   "Serum",
-  "Gece Kremi",
+  "Night Cream",
 ];
 
 export default function RoutinePage() {
