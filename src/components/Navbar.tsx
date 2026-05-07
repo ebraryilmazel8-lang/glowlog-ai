@@ -27,13 +27,13 @@ export function Navbar() {
               href="/analyze"
               className="px-4 py-2 rounded-xl text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 transition-all"
             >
-              Cilt Analizi
+              Skin Analysis
             </Link>
             <Link
               href="/routine"
               className="px-4 py-2 rounded-xl text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 transition-all"
             >
-              Rutin Takibi
+              Routine Tracker
             </Link>
 
             {session ? (
@@ -62,9 +62,9 @@ export function Navbar() {
             ) : (
               <button
                 onClick={() => signIn()}
-                className="ml-4 px-5 py-2 rounded-xl bg-gradient-to-r from-glow-400 to-blush-400 text-white text-sm font-medium hover:shadow-lg hover:shadow-blush-200/50 transition-all hover:-translate-y-0.5"
+                className="ml-4 px-5 py-2 rounded-xl bg-gradient-to-r from-glow-400 to-blush-400 text-white text-sm font-medium hover:shadow-lg hover:shadow-glow-200/50 transition-all"
               >
-                Giris Yap
+                Sign In
               </button>
             )}
           </div>
@@ -82,18 +82,18 @@ export function Navbar() {
         {menuOpen && (
           <div className="md:hidden pb-4 space-y-1">
             <Link href="/analyze" className="block px-4 py-2 rounded-xl text-gray-600 hover:bg-white/50" onClick={() => setMenuOpen(false)}>
-              Cilt Analizi
+              Skin Analysis
             </Link>
             <Link href="/routine" className="block px-4 py-2 rounded-xl text-gray-600 hover:bg-white/50" onClick={() => setMenuOpen(false)}>
-              Rutin Takibi
+              Routine Tracker
             </Link>
             {session ? (
               <button onClick={() => signOut()} className="w-full text-left px-4 py-2 rounded-xl text-gray-600 hover:bg-white/50">
-                Cikis Yap
+                Sign Out
               </button>
             ) : (
               <button onClick={() => signIn()} className="w-full text-left px-4 py-2 rounded-xl text-glow-500 font-medium hover:bg-white/50">
-                Giris Yap
+                Sign In
               </button>
             )}
           </div>
