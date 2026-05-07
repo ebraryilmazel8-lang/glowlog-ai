@@ -1,26 +1,18 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
 import {
   Sparkles,
   Camera,
-  CalendarCheck,
   ArrowRight,
   Droplets,
   Shield,
-  Zap,
   Star,
-  Heart,
   Leaf,
   ChevronRight,
   Upload,
   Sun,
   Moon,
-  Eye,
   TrendingUp,
-  Users,
-  Award,
-  CheckCircle,
   BookOpen,
 } from "lucide-react";
 
@@ -47,7 +39,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
-              Upload a selfie and get an instant AI-powered skin analysis with personalized routines, ingredient recommendations, and progress tracking - all in seconds.
+              Upload a selfie and get an instant AI-powered skin analysis with personalized routines, ingredient recommendations, and progress tracking.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
@@ -68,7 +60,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Hero visual mockup */}
+          {/* Hero visual */}
           <div className="mt-16 max-w-4xl mx-auto">
             <div className="glass-strong rounded-3xl p-6 sm:p-8 shadow-2xl">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -116,7 +108,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trusted By / Social Proof Bar */}
+      {/* Stats Bar */}
       <section className="py-12 px-4 border-y border-gray-100/50">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
@@ -144,36 +136,14 @@ export default function Home() {
       <section id="how-it-works" className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">
-              How It Works
-            </h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
-              Three simple steps to understand your skin better than ever before.
-            </p>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">How It Works</h2>
+            <p className="text-gray-500 max-w-xl mx-auto">Three simple steps to understand your skin better than ever before.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              {
-                step: "01",
-                icon: Upload,
-                title: "Upload Your Photo",
-                desc: "Take a clear selfie in natural light. Our AI works best with well-lit, front-facing photos.",
-                color: "from-glow-400 to-glow-500",
-              },
-              {
-                step: "02",
-                icon: Sparkles,
-                title: "AI Analyzes Your Skin",
-                desc: "Google Gemini AI examines your skin for type, hydration, concerns, and overall health in seconds.",
-                color: "from-blush-400 to-blush-500",
-              },
-              {
-                step: "03",
-                icon: BookOpen,
-                title: "Get Your Routine",
-                desc: "Receive a personalized AM/PM skincare routine with product recommendations tailored to your needs.",
-                color: "from-sage-400 to-sage-500",
-              },
+              { step: "01", icon: Upload, title: "Upload Your Photo", desc: "Take a clear selfie in natural light. Our AI works best with well-lit, front-facing photos.", color: "from-glow-400 to-glow-500" },
+              { step: "02", icon: Sparkles, title: "AI Analyzes Your Skin", desc: "Google Gemini AI examines your skin for type, hydration, concerns, and overall health in seconds.", color: "from-blush-400 to-blush-500" },
+              { step: "03", icon: BookOpen, title: "Get Your Routine", desc: "Receive a personalized AM/PM skincare routine with product recommendations tailored to your needs.", color: "from-sage-400 to-sage-500" },
             ].map((item) => (
               <div key={item.step} className="group relative">
                 <div className="glass-strong rounded-2xl p-8 h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
@@ -190,21 +160,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Grid */}
+      {/* Features */}
       <section className="py-24 px-4 bg-gradient-to-b from-white/0 via-glow-50/30 to-white/0">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">
-              Everything Your Skin Needs
-            </h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
-              Comprehensive AI-powered skincare tools designed to give you clarity and confidence.
-            </p>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Everything Your Skin Needs</h2>
+            <p className="text-gray-500 max-w-xl mx-auto">Comprehensive AI-powered skincare tools designed to give you clarity and confidence.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: Camera, title: "AI Skin Analysis", desc: "Upload a photo and get detailed insights about your skin type, hydration, and concerns.", tag: "Core" },
-              { icon: Droplets, title: "Hydration Tracking", desc: "Monitor your skin's moisture levels over time and adjust your routine accordingly.", tag: "Smart" },
+              { icon: Droplets, title: "Hydration Tracking", desc: "Monitor your skin moisture levels over time and adjust your routine accordingly.", tag: "Smart" },
               { icon: Sun, title: "AM/PM Routines", desc: "Personalized morning and evening routines based on your unique skin profile.", tag: "Personal" },
               { icon: Shield, title: "Ingredient Scanner", desc: "Learn which ingredients work best for your skin type and which ones to avoid.", tag: "Safety" },
               { icon: TrendingUp, title: "Progress Tracking", desc: "Track your skin health score over weeks and months to see real improvement.", tag: "Growth" },
@@ -225,43 +191,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skincare Guide / Blog Section */}
+      {/* Skincare Knowledge Hub */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">
-              Skincare Knowledge Hub
-            </h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
-              Expert-backed insights to help you build the perfect routine.
-            </p>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Skincare Knowledge Hub</h2>
+            <p className="text-gray-500 max-w-xl mx-auto">Expert-backed insights to help you build the perfect routine.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              {
-                emoji: "\u2600\uFE0F",
-                title: "Why Sunscreen is Non-Negotiable",
-                preview: "UV damage is the #1 cause of premature aging. Even on cloudy days, up to 80% of UV rays penetrate through. A broad-spectrum SPF 30+ should be the last step of every morning routine.",
-                tag: "Essentials",
-              },
-              {
-                emoji: "\uD83E\uDDEA",
-                title: "Understanding Your Skin Barrier",
-                preview: "Your skin barrier is the outermost layer that locks in moisture and keeps irritants out. Over-exfoliating, harsh cleansers, and skipping moisturizer can compromise it.",
-                tag: "Science",
-              },
-              {
-                emoji: "\u2728",
-                title: "The Right Order to Layer Products",
-                preview: "Always go thinnest to thickest: cleanser, toner, serum, moisturizer, SPF. At night, swap SPF for a richer night cream or sleeping mask after your serums.",
-                tag: "Routine",
-              },
-              {
-                emoji: "\uD83C\uDF3F",
-                title: "Ingredients That Actually Work",
-                preview: "Retinol for anti-aging, niacinamide for pores, hyaluronic acid for hydration, vitamin C for brightening. These are the gold-standard ingredients backed by decades of research.",
-                tag: "Ingredients",
-              },
+              { emoji: "\u2600\uFE0F", title: "Why Sunscreen is Non-Negotiable", preview: "UV damage is the #1 cause of premature aging. Even on cloudy days, up to 80% of UV rays penetrate through. A broad-spectrum SPF 30+ should be the last step of every morning routine.", tag: "Essentials" },
+              { emoji: "\uD83E\uDDEA", title: "Understanding Your Skin Barrier", preview: "Your skin barrier is the outermost layer that locks in moisture and keeps irritants out. Over-exfoliating, harsh cleansers, and skipping moisturizer can compromise it.", tag: "Science" },
+              { emoji: "\u2728", title: "The Right Order to Layer Products", preview: "Always go thinnest to thickest: cleanser, toner, serum, moisturizer, SPF. At night, swap SPF for a richer night cream or sleeping mask after your serums.", tag: "Routine" },
+              { emoji: "\uD83C\uDF3F", title: "Ingredients That Actually Work", preview: "Retinol for anti-aging, niacinamide for pores, hyaluronic acid for hydration, vitamin C for brightening. These are the gold-standard ingredients backed by decades of research.", tag: "Ingredients" },
             ].map((article) => (
               <div key={article.title} className="glass-strong rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group">
                 <div className="flex items-center gap-3 mb-4">
@@ -276,21 +218,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials - using curly braces for quotes to avoid JSX escaping issues */}
       <section className="py-24 px-4 bg-gradient-to-b from-white/0 via-blush-50/30 to-white/0">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">
-              Loved by Skincare Enthusiasts
-            </h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
-              See what our community has to say about their Glow Log experience.
-            </p>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Loved by Skincare Enthusiasts</h2>
+            <p className="text-gray-500 max-w-xl mx-auto">See what our community has to say about their Glow Log experience.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { name: "Sarah K.", text: "The AI analysis was spot-on about my combination skin. The routine suggestions completely transformed my morning skincare game.", rating: 5 },
-              { name: "Emily R.", text: "I love how it explains WHY certain products work for my skin type. It's like having a dermatologist in my pocket.", rating: 5 },
+              { name: "Emily R.", text: "I love how it explains WHY certain products work for my skin type. It is like having a dermatologist in my pocket.", rating: 5 },
               { name: "Jessica M.", text: "Finally found a skincare tool that actually understands my sensitive skin. The ingredient warnings have saved me from so many bad purchases!", rating: 5 },
             ].map((t) => (
               <div key={t.name} className="glass-strong rounded-2xl p-6">
@@ -299,7 +237,7 @@ export default function Home() {
                     <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">"{t.text}"</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">{t.text}</p>
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-gradient-to-br from-glow-300 to-blush-300 flex items-center justify-center">
                     <span className="text-white text-xs font-bold">{t.name[0]}</span>
@@ -312,18 +250,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ */}
       <section className="py-24 px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
-            </h2>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-4">
             {[
               { q: "Is the skin analysis really free?", a: "Yes! You can analyze your skin without creating an account. We believe everyone deserves access to AI-powered skincare insights." },
-              { q: "How accurate is the AI analysis?", a: "Our AI is powered by Google Gemini and has a 92% accuracy rate for skin type detection. However, it's not a replacement for professional dermatological advice." },
+              { q: "How accurate is the AI analysis?", a: "Our AI is powered by Google Gemini and has a 92% accuracy rate for skin type detection. However, it is not a replacement for professional dermatological advice." },
               { q: "Is my photo stored or shared?", a: "No. Your photo is processed in real-time and is never stored on our servers. We take your privacy seriously." },
               { q: "What should I do with my results?", a: "Use your personalized routine as a starting guide. Introduce new products one at a time and give each product 4-6 weeks before judging results." },
             ].map((faq) => (
@@ -345,12 +281,8 @@ export default function Home() {
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-glow-400 to-blush-400 flex items-center justify-center mx-auto mb-6">
                 <Sparkles className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">
-                Ready to know your skin?
-              </h2>
-              <p className="text-gray-500 max-w-lg mx-auto mb-8">
-                Join thousands who have already discovered their perfect skincare routine with AI-powered analysis.
-              </p>
+              <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Ready to know your skin?</h2>
+              <p className="text-gray-500 max-w-lg mx-auto mb-8">Join thousands who have already discovered their perfect skincare routine with AI-powered analysis.</p>
               <Link
                 href="/analyze"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-glow-400 to-blush-400 text-white rounded-2xl font-semibold text-lg shadow-xl shadow-glow-300/30 hover:shadow-2xl hover:shadow-glow-300/40 hover:-translate-y-0.5 transition-all"
@@ -379,9 +311,7 @@ export default function Home() {
               <Link href="/routine" className="hover:text-gray-600 transition-colors">Routine</Link>
               <span>Built with Gemini AI</span>
             </div>
-            <p className="text-sm text-gray-400">
-              &copy; 2024 Glow Log. All rights reserved.
-            </p>
+            <p className="text-sm text-gray-400">&copy; 2024 Glow Log. All rights reserved.</p>
           </div>
         </div>
       </footer>
