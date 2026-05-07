@@ -30,7 +30,7 @@ export default function Home() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8">
             <Sparkles className="w-4 h-4 text-glow-400" />
             <span className="text-sm text-gray-600">
-              AI destekli cilt analizi â ucretsiz dene
+              AI destekli cilt analizi - ucretsiz dene
             </span>
           </div>
 
@@ -42,7 +42,7 @@ export default function Home() {
 
           <p className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
             Bir selfie yukle, yapay zeka cildini analiz etsin. Kisisel bakim
-            rutini ve urun onerileri aninda hazir â kayit bile gerekmez.
+            rutini ve urun onerileri aninda hazir - kayit bile gerekmez.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -61,39 +61,34 @@ export default function Home() {
             </Link>
           </div>
 
-          <p className="mt-6 text-xs text-gray-400">
+          <p className="mt-6 text-sm text-gray-400">
             Kayit gerektirmez &middot; Sonuclar aninda &middot; 100% ucretsiz
           </p>
         </div>
       </section>
 
-      {/* Try Now - Interactive CTA */}
-      <section className="relative py-16 px-4">
-        <div className="max-w-3xl mx-auto">
+      {/* Interactive Try Now */}
+      <section className="relative py-10 px-4">
+        <div className="max-w-xl mx-auto">
           <Link href="/analyze" className="block group">
-            <div className="relative glass-strong rounded-3xl p-8 sm:p-12 text-center hover:shadow-2xl hover:shadow-blush-100/40 transition-all hover:-translate-y-1 cursor-pointer overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-glow-50/50 to-blush-50/50 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="relative">
-                <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-glow-200 to-blush-200 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <Camera className="w-9 h-9 text-glow-600" />
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-display font-bold text-gray-900 mb-3">
-                  Cildini Simdi Analiz Et
-                </h2>
-                <p className="text-gray-500 max-w-md mx-auto mb-6">
-                  Bir selfie yukle, Gemini AI cilt tipini, nem seviyeni ve sorunlarini 
-                  analiz etsin. Kisisel bakim onerileri aninda hazir.
-                </p>
-                <div className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-glow-400 to-blush-400 text-white font-medium group-hover:shadow-lg transition-all">
-                  <Upload className="w-4 h-4" />
-                  Fotografini Yukle
-                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
+            <div className="glass-strong rounded-3xl p-8 text-center hover:shadow-xl hover:shadow-blush-100/30 transition-all hover:-translate-y-1 cursor-pointer">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-glow-200 to-blush-200 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <Upload className="w-7 h-7 text-gray-700" />
+              </div>
+              <h3 className="font-display text-xl font-bold text-gray-900 mb-2">
+                Hemen Dene
+              </h3>
+              <p className="text-gray-500 mb-4">
+                Bir selfie yukle, AI cildini 30 saniyede analiz etsin
+              </p>
+              <div className="inline-flex items-center gap-1 text-blush-500 font-medium text-sm">
+                Analizi Baslat <ChevronRight className="w-4 h-4" />
               </div>
             </div>
           </Link>
         </div>
       </section>
+
       {/* Features */}
       <section className="relative py-20 px-4">
         <div className="max-w-6xl mx-auto">
@@ -102,7 +97,7 @@ export default function Home() {
               Neler Yapabilirsin?
             </h2>
             <p className="text-gray-500 max-w-lg mx-auto">
-              Glow Log ile cilt bakim rutinini bir ust seviyeye tasimak cok kolay.
+              Glow Log ile cilt bakim rutinini bir ust seviyeye tasi.
             </p>
           </div>
 
@@ -110,21 +105,21 @@ export default function Home() {
             <FeatureCard
               icon={<Camera className="w-6 h-6" />}
               title="AI Cilt Analizi"
-              description="Bir selfie yukle, yapay zeka cilt tipini, sorunlarini ve nem seviyeni analiz etsin. Kisisellestirilmis oneriler al."
+              description="Bir selfie yukle, yapay zeka cilt tipini, sorunlarini ve nem seviyeni analiz etsin."
               gradient="from-glow-100 to-glow-50"
               iconBg="bg-glow-200"
             />
             <FeatureCard
               icon={<CalendarCheck className="w-6 h-6" />}
               title="Rutin Takibi"
-              description="Sabah ve aksam bakim rutinini logla. Hangi urunleri kullandigini ve cildinin nasil hissettigini kaydet."
+              description="Sabah ve aksam bakim rutinini logla. Hangi urunleri kullandigini kaydet."
               gradient="from-blush-100 to-blush-50"
               iconBg="bg-blush-200"
             />
             <FeatureCard
               icon={<Sparkles className="w-6 h-6" />}
               title="Akilli Oneriler"
-              description="Cilt analizine gore kisisel rutin onerileri, urun tavsiyeleri ve haftalik bakim plani olustur."
+              description="Cilt analizine gore kisisel rutin onerileri ve urun tavsiyeleri al."
               gradient="from-sage-100 to-sage-50"
               iconBg="bg-sage-200"
             />
@@ -137,40 +132,30 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">
-              Kullanicilar Ne Diyor?
+              Kullananlar Ne Diyor?
             </h2>
-            <p className="text-gray-500 max-w-lg mx-auto">
-              Binlerce kisi Glow Log ile cilt bakim rutinini donusturdu.
-            </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-6">
             <TestimonialCard
               name="Elif K."
-              role="2 aydir kullaniyor"
-              text="Cilt tipimi hep yag saniyordum ama aslinda dehidre oldugunu ogrenidum. Onerilen rutinle cildimdeki fark inanilmaz!"
+              text="Cilt tipimi hic bu kadar iyi anlamamistim. AI analizi gercekten isabetli!"
               rating={5}
-              emoji="â¨"
             />
             <TestimonialCard
               name="Zeynep A."
-              role="3 aydir kullaniyor"
-              text="Sabah ve aksam rutinlerimi takip etmek cok kolaylasti. Artik hangi urunun ne ise yaradigini biliyorum."
+              text="Sabah aksam rutinimi takip etmek harika. Cildim 2 haftada fark yaratti."
               rating={5}
-              emoji="ð¸"
             />
             <TestimonialCard
-              name="Merve S."
-              role="1 aydir kullaniyor"
-              text="AI analizin verdigi niacinamide onerisi hayatimi degistirdi. Goz alti morluklar gozle gorulur azaldi!"
-              rating={5}
-              emoji="ð§"
+              name="Merve T."
+              text="Urun onerileri cok mantikli. Gereksiz urunlerden kurtuldum."
+              rating={4}
             />
           </div>
         </div>
       </section>
 
-      {/* Skincare Tips */}
+      {/* Skincare Guide */}
       <section className="relative py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -178,34 +163,33 @@ export default function Home() {
               Skincare Rehberi
             </h2>
             <p className="text-gray-500 max-w-lg mx-auto">
-              En etkili ingredientler ve ne ise yaradiklari.
+              En etkili cilt bakim ingredientleri hakkinda bilgi edin.
             </p>
           </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <IngredientCard
-              name="Niacinamide"
-              benefit="Gozenek kusultme & parlaklik"
-              icon={<Sparkles className="w-5 h-5" />}
-              color="from-glow-100 to-glow-50"
-            />
-            <IngredientCard
-              name="Hyaluronic Acid"
-              benefit="Derin nemlendirme & dolgunluk"
               icon={<Droplets className="w-5 h-5" />}
-              color="from-blue-100 to-blue-50"
+              name="Niacinamide"
+              benefit="Gozenekleri sikilastirir, leke giderici"
+              color="bg-glow-100 text-glow-600"
             />
             <IngredientCard
+              icon={<Heart className="w-5 h-5" />}
+              name="Hyaluronic Acid"
+              benefit="Derin nemlendirme, kirisilik onleyici"
+              color="bg-blush-100 text-blush-600"
+            />
+            <IngredientCard
+              icon={<Star className="w-5 h-5" />}
               name="Retinol"
-              benefit="Anti-aging & cilt yenileme"
-              icon={<Zap className="w-5 h-5" />}
-              color="from-blush-100 to-blush-50"
+              benefit="Anti-aging, hucre yenilenme"
+              color="bg-amber-100 text-amber-600"
             />
             <IngredientCard
-              name="Centella Asiatica"
-              benefit="Yatistirma & onarim"
               icon={<Leaf className="w-5 h-5" />}
-              color="from-sage-100 to-sage-50"
+              name="Centella Asiatica"
+              benefit="Yatistirici, onarici, hassas ciltler icin"
+              color="bg-sage-100 text-sage-600"
             />
           </div>
         </div>
@@ -222,9 +206,9 @@ export default function Home() {
 
           <div className="grid sm:grid-cols-3 gap-8">
             {[
-              { step: "1", icon: <Camera className="w-5 h-5" />, title: "Foto yukle", desc: "Temiz cildinin bir fotografini cek ve yukle. Kayit gerekmez!" },
-              { step: "2", icon: <Zap className="w-5 h-5" />, title: "AI analiz etsin", desc: "Gemini AI cildini detayli sekilde analiz eder â saniyeler icinde." },
-              { step: "3", icon: <Shield className="w-5 h-5" />, title: "Rutinini olustur", desc: "Kisisel onerilerle bakim rutinini takip et ve sonuclari gor." },
+              { step: "1", icon: <Camera className="w-5 h-5" />, title: "Foto yukle", desc: "Temiz cildinin bir fotografini cek ve yukle." },
+              { step: "2", icon: <Zap className="w-5 h-5" />, title: "AI analiz etsin", desc: "Gemini AI cildini detayli sekilde analiz eder." },
+              { step: "3", icon: <Shield className="w-5 h-5" />, title: "Rutinini olustur", desc: "Kisisel onerilerle bakim rutinini takip et." },
             ].map((item) => (
               <div key={item.step} className="text-center">
                 <div className="w-14 h-14 rounded-2xl glass-strong flex items-center justify-center mx-auto mb-4 text-glow-500">
@@ -250,7 +234,7 @@ export default function Home() {
             {[
               { icon: <Droplets className="w-5 h-5" />, value: "AI", label: "Destekli Analiz" },
               { icon: <Shield className="w-5 h-5" />, value: "7/24", label: "Erisim" },
-              { icon: <Sparkles className="w-5 h-5" />, value: "100%", label: "Ucretsiz" },
+              { icon: <Sparkles className="w-5 h-5" />, value: "100%", label: "Kisisel" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="flex justify-center mb-2 text-blush-400">{stat.icon}</div>
@@ -264,17 +248,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* CTA */}
       <section className="relative py-20 px-4">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">
-            Cilt Bakim Yolculuguna
-            <br />
-            <span className="text-gradient">Simdi Basla</span>
+            Cildine Ozen Gostermeye Basla
           </h2>
-          <p className="text-gray-500 max-w-lg mx-auto mb-8">
-            Kayit gerektirmez. Fotografini yukle, AI cildini analiz etsin,
-            sana ozel bakim rutinini kesfet.
+          <p className="text-gray-500 mb-8">
+            Ucretsiz AI cilt analizi ile bakim rutinini kesfet.
           </p>
           <Link
             href="/analyze"
@@ -298,6 +279,42 @@ export default function Home() {
           Yapay zeka destekli cilt bakim asistanin. &copy; {new Date().getFullYear()}
         </p>
       </footer>
+    </div>
+  );
+}
+
+function TestimonialCard({ name, text, rating }: { name: string; text: string; rating: number }) {
+  return (
+    <div className="glass-strong rounded-3xl p-6 hover:shadow-lg transition-all">
+      <div className="flex gap-1 mb-3">
+        {Array.from({ length: rating }).map((_, i) => (
+          <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+        ))}
+      </div>
+      <p className="text-gray-600 text-sm mb-4 leading-relaxed">{text}</p>
+      <div className="text-sm font-semibold text-gray-900">{name}</div>
+    </div>
+  );
+}
+
+function IngredientCard({
+  icon,
+  name,
+  benefit,
+  color,
+}: {
+  icon: React.ReactNode;
+  name: string;
+  benefit: string;
+  color: string;
+}) {
+  return (
+    <div className="glass-strong rounded-2xl p-5 hover:shadow-lg transition-all hover:-translate-y-1">
+      <div className={`w-10 h-10 rounded-xl ${color} flex items-center justify-center mb-3`}>
+        {icon}
+      </div>
+      <h4 className="font-display font-semibold text-gray-900 mb-1">{name}</h4>
+      <p className="text-xs text-gray-500">{benefit}</p>
     </div>
   );
 }
@@ -328,56 +345,6 @@ function FeatureCard({
         {title}
       </h3>
       <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
-    </div>
-  );
-}
-
-function TestimonialCard({
-  name,
-  role,
-  text,
-  rating,
-  emoji,
-}: {
-  name: string;
-  role: string;
-  text: string;
-  rating: number;
-  emoji: string;
-}) {
-  return (
-    <div className="glass-strong rounded-3xl p-6 hover:shadow-lg hover:shadow-blush-100/20 transition-all hover:-translate-y-1">
-      <div className="text-3xl mb-4">{emoji}</div>
-      <div className="flex gap-0.5 mb-3">
-        {Array.from({ length: rating }).map((_, i) => (
-          <Star key={i} className="w-4 h-4 fill-cream-400 text-cream-400" />
-        ))}
-      </div>
-      <p className="text-sm text-gray-600 leading-relaxed mb-4">&ldquo;{text}&rdquo;</p>
-      <div>
-        <div className="font-semibold text-gray-900 text-sm">{name}</div>
-        <div className="text-xs text-gray-400">{role}</div>
-      </div>
-    </div>
-  );
-}
-
-function IngredientCard({
-  name,
-  benefit,
-  icon,
-  color,
-}: {
-  name: string;
-  benefit: string;
-  icon: React.ReactNode;
-  color: string;
-}) {
-  return (
-    <div className={`rounded-2xl bg-gradient-to-br ${color} p-5 border border-white/60 hover:shadow-md transition-all hover:-translate-y-0.5`}>
-      <div className="text-glow-500 mb-3">{icon}</div>
-      <div className="font-display font-semibold text-gray-900 text-sm mb-1">{name}</div>
-      <div className="text-xs text-gray-500">{benefit}</div>
     </div>
   );
 }
