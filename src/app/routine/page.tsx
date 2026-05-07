@@ -21,7 +21,7 @@ const DEFAULT_MORNING_STEPS = [
   "Tonik",
   "Serum",
   "Nemlendirici",
-  "Gunes Kremi",
+  "Dayes Kremi",
 ];
 const DEFAULT_EVENING_STEPS = [
   "Makyaj Temizleyici",
@@ -95,7 +95,7 @@ export default function RoutinePage() {
     );
   };
 
-  const updateNotes = (notes: string) => {
+  const updateNotees = (notes: string) => {
     if (!todayEntry) return;
     const updated = { ...todayEntry, notes };
     setTodayEntry(updated);
@@ -129,13 +129,13 @@ export default function RoutinePage() {
       <div className="pt-24 pb-16 px-4 min-h-screen flex items-center justify-center">
         <div className="text-center glass-strong rounded-3xl p-10 max-w-md">
           <CalendarCheck className="w-12 h-12 text-sage-400 mx-auto mb-4" />
-          <h2 className="text-2xl font-display font-bold text-gray-900 mb-3">Giris Yap</h2>
-          <p className="text-gray-500 mb-6">Rutinini takip etmek icin once giris yap.</p>
+          <h2 className="text-2xl font-display font-bold text-gray-900 mb-3">Sign In</h2>
+          <p className="text-gray-500 mb-6">Sign in to track your routine.</p>
           <button
             onClick={() => signIn()}
             className="px-6 py-3 rounded-xl bg-gradient-to-r from-glow-400 to-blush-400 text-white font-medium hover:shadow-lg transition-all"
           >
-            Giris Yap
+            Sign In
           </button>
         </div>
       </div>
@@ -149,13 +149,13 @@ export default function RoutinePage() {
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-4">
             <CalendarCheck className="w-4 h-4 text-sage-400" />
-            <span className="text-sm text-gray-600">Gunluk takip</span>
+            <span className="text-sm text-gray-600">Daily tracking</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-3">
-            Rutin Takibi
+            Routine Tracker
           </h1>
           <p className="text-gray-500">
-            Sabah ve aksam bakim rutinini logla, ilerlemeni takip et.
+            Log your morning and evening skincare routine, track your progress.
           </p>
         </div>
 
@@ -169,7 +169,7 @@ export default function RoutinePage() {
                 : "text-gray-400 hover:text-gray-600"
             }`}
           >
-            <Sun className="w-4 h-4" /> Sabah
+            <Sun className="w-4 h-4" /> Morning
           </button>
           <button
             onClick={() => setActiveTab("evening")}
@@ -179,7 +179,7 @@ export default function RoutinePage() {
                 : "text-gray-400 hover:text-gray-600"
             }`}
           >
-            <Moon className="w-4 h-4" /> Aksam
+            <Moon className="w-4 h-4" /> Evening
           </button>
         </div>
 
@@ -205,7 +205,7 @@ export default function RoutinePage() {
               {progress === 100 && (
                 <div className="flex items-center gap-2 mt-3 text-sage-600 text-sm">
                   <Sparkles className="w-4 h-4" />
-                  Harika! Bugunun rutinini tamamladin!
+                  Great! You completed today's routine!
                 </div>
               )}
             </div>
@@ -252,7 +252,7 @@ export default function RoutinePage() {
             {/* Skin feeling */}
             <div className="glass-strong rounded-2xl p-5">
               <div className="text-sm font-medium text-gray-700 mb-3">
-                Cildin nasil hissediyor?
+                How does your skin feel?
               </div>
               <div className="flex justify-center gap-4">
                 {[
@@ -277,13 +277,13 @@ export default function RoutinePage() {
               </div>
             </div>
 
-            {/* Notes */}
+            {/* Notees */}
             <div className="glass-strong rounded-2xl p-5">
-              <div className="text-sm font-medium text-gray-700 mb-2">Notlar</div>
+              <div className="text-sm font-medium text-gray-700 mb-2">Notelar</div>
               <textarea
                 value={todayEntry.notes}
-                onChange={(e) => updateNotes(e.target.value)}
-                placeholder="Bugun cildinle ilgili bir not ekle..."
+                onChange={(e) => updateNotees(e.target.value)}
+                placeholder="Add a note about your skin today..."
                 className="w-full bg-transparent text-sm text-gray-600 placeholder:text-gray-300 outline-none resize-none h-20"
               />
             </div>
@@ -298,17 +298,17 @@ export default function RoutinePage() {
               )}
             </div>
             <h3 className="font-display font-semibold text-gray-900 mb-2">
-              {activeTab === "morning" ? "Sabah" : "Aksam"} Rutini
+              {activeTab === "morning" ? "Morning" : "Evening"} Routine
             </h3>
             <p className="text-sm text-gray-400 mb-6">
-              Bugunun {activeTab === "morning" ? "sabah" : "aksam"} rutinini henuz baslatmadin.
+              You haven't started today's {activeTab === "morning" ? "morning" : "evening"} routine yet.
             </p>
             <button
               onClick={startRoutine}
               className="px-6 py-3 rounded-xl bg-gradient-to-r from-sage-400 to-sage-300 text-white font-medium hover:shadow-lg transition-all inline-flex items-center gap-2"
             >
               <Plus className="w-4 h-4" />
-              Rutini Baslat
+              Start Routine
             </button>
           </div>
         )}
@@ -321,7 +321,7 @@ export default function RoutinePage() {
               className="w-full flex items-center justify-between p-4 glass-strong rounded-2xl mb-4"
             >
               <span className="font-medium text-gray-700 text-sm">
-                Gecmis Rutinler ({pastEntries.length})
+                Past Routines ({pastEntries.length})
               </span>
               <ChevronDown
                 className={`w-4 h-4 text-gray-400 transition-transform ${
@@ -348,13 +348,13 @@ export default function RoutinePage() {
                         )}
                         <div>
                           <div className="text-sm font-medium text-gray-700">
-                            {new Date(entry.date).toLocaleDateString("tr-TR", {
+                            {new Date(entry.date).toLocaleDateString("en-US", {
                               day: "numeric",
                               month: "long",
                             })}
                           </div>
                           <div className="text-xs text-gray-400">
-                            {done}/{total} adim tamamlandi
+                            {done}/{total} steps completed
                           </div>
                         </div>
                       </div>
