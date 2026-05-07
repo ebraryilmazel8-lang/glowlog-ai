@@ -6,7 +6,6 @@ import {
   ArrowRight,
   Droplets,
   Shield,
-  Star,
   Leaf,
   ChevronRight,
   Upload,
@@ -212,38 +211,6 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-glow-600 transition-colors">{article.title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">{article.preview}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials - using curly braces for quotes to avoid JSX escaping issues */}
-      <section className="py-24 px-4 bg-gradient-to-b from-white/0 via-blush-50/30 to-white/0">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Loved by Skincare Enthusiasts</h2>
-            <p className="text-gray-500 max-w-xl mx-auto">See what our community has to say about their Glow Log experience.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { name: "Sarah K.", text: "The AI analysis was spot-on about my combination skin. The routine suggestions completely transformed my morning skincare game.", rating: 5 },
-              { name: "Emily R.", text: "I love how it explains WHY certain products work for my skin type. It is like having a dermatologist in my pocket.", rating: 5 },
-              { name: "Jessica M.", text: "Finally found a skincare tool that actually understands my sensitive skin. The ingredient warnings have saved me from so many bad purchases!", rating: 5 },
-            ].map((t) => (
-              <div key={t.name} className="glass-strong rounded-2xl p-6">
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: t.rating }).map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{t.text}</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-glow-300 to-blush-300 flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">{t.name[0]}</span>
-                  </div>
-                  <span className="text-sm font-medium text-gray-700">{t.name}</span>
-                </div>
               </div>
             ))}
           </div>
