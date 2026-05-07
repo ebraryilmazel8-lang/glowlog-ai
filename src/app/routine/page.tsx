@@ -17,18 +17,18 @@ import {
 import type { RoutineEntry, RoutineStep } from "@/types";
 
 const DEFAULT_MORNING_STEPS = [
-  "Cleanser",
-  "Toner",
+  "Temizleyici",
+  "Tonik",
   "Serum",
-  "Moisturizer",
-  "Sunscreen",
+  "Nemlendirici",
+  "Dayes Kremi",
 ];
 const DEFAULT_EVENING_STEPS = [
-  "Makeup Remover",
-  "Cleanser",
-  "Toner",
+  "Makyaj Temizleyici",
+  "Temizleyici",
+  "Tonik",
   "Serum",
-  "Night Cream",
+  "Gece Kremi",
 ];
 
 export default function RoutinePage() {
@@ -205,7 +205,7 @@ export default function RoutinePage() {
               {progress === 100 && (
                 <div className="flex items-center gap-2 mt-3 text-sage-600 text-sm">
                   <Sparkles className="w-4 h-4" />
-                  Great! You completed today's routine!
+                  Great! You completed today&apos;s routine!
                 </div>
               )}
             </div>
@@ -301,7 +301,7 @@ export default function RoutinePage() {
               {activeTab === "morning" ? "Morning" : "Evening"} Routine
             </h3>
             <p className="text-sm text-gray-400 mb-6">
-              You haven't started today's {activeTab === "morning" ? "morning" : "evening"} routine yet.
+              You haven&apos;t started today&apos;s {activeTab === "morning" ? "morning" : "evening"} routine yet.
             </p>
             <button
               onClick={startRoutine}
