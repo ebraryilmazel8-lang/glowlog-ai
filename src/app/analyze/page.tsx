@@ -1,6 +1,5 @@
 "use client";
 import { useState, useRef } from "react";
-import { useSession, signIn } from "next-auth/react";
 import {
   Camera,
   Upload,
@@ -16,7 +15,6 @@ import {
 import type { SkinAnalysisResult } from "@/types";
 
 export default function AnalyzePage() {
-  const { data: session } = useSession();
   const [image, setImage] = useState<string | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -65,28 +63,6 @@ export default function AnalyzePage() {
       setLoading(false);
     }
   };
-
-  if (!session) {
-    return (
-      <div className="pt-24 pb-16 px-4 min-h-screen flex items-center justify-center">
-        <div className="text-center glass-strong rounded-3xl p-10 max-w-md">
-          <Camera className="w-12 h-12 text-glow-400 mx-auto mb-4" />
-          <h2 className="text-2xl font-display font-bold text-gray-900 mb-3">
-            Giris Yap
-          </h2>
-          <p className="text-gray-500 mb-6">
-            Cilt analizini kullanmak icin once giris yapman gerekiyor.
-          </p>
-          <button
-            onClick={() => signIn()}
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-glow-400 to-blush-400 text-white font-medium hover:shadow-lg transition-all"
-          >
-            Giris Yap
-          </button>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="pt-24 pb-16 px-4">
