@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import {
   Camera, Upload, Loader2, Sparkles, Droplets,
-  AlertCircle, CheckCircle2, Sun, Moon, X, ChevronRight, ArrowLeft,
+  AlertCircle, CheckCircle2, Sun, Moon, X, ChevronRight, ArrowLeft, Tag, ShoppingBag,
 } from "lucide-react";
 import type { SkinAnalysisResult } from "@/types";
 
@@ -18,6 +18,7 @@ export default function AnalyzePage() {
     concerns: [] as string[],
     ageRange: "",
     routine: "",
+    budget: "",
   });
   const fileRef = useRef<HTMLInputElement>(null);
 
@@ -60,6 +61,7 @@ export default function AnalyzePage() {
             concerns: answers.concerns,
             ageRange: answers.ageRange,
             routine: answers.routine,
+            budget: answers.budget,
           },
         }),
       });
@@ -123,7 +125,7 @@ export default function AnalyzePage() {
           </div>
         </div>
 
-        {/* ─── STEP 1 ─── */}
+        {/* âââ STEP 1 âââ */}
         {step === 1 && (
           <div className="max-w-lg mx-auto space-y-4">
             <div
@@ -186,7 +188,7 @@ export default function AnalyzePage() {
           </div>
         )}
 
-        {/* ─── STEP 2 ─── */}
+        {/* âââ STEP 2 âââ */}
         {step === 2 && (
           <div className="max-w-lg mx-auto space-y-6">
             {/* Q1 */}
@@ -298,7 +300,44 @@ export default function AnalyzePage() {
               </div>
             </div>
 
-            {/* Buttons */}
+            
+              {/* Question 5: Budget */}
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-1 flex items-center gap-2">
+                  <Tag className="w-5 h-5 text-glow-500" />
+                  What&apos;s your skincare budget?
+                </h3>
+                <p className="text-sm text-gray-500 mb-3">This helps us recommend products in your price range</p>
+                <div className="grid grid-cols-2 gap-2">
+                  {[
+                    { label: "Budget-Friendly", desc: "Under $15 per product" },
+                    { label: "Mid-Range", desc: "$15 - $40 per product" },
+                    { label: "Premium", desc: "$40 - $80 per product" },
+                    { label: "Luxury", desc: "$80+ per product" },
+                  ].map((b) => (
+                    <button
+                      key={b.label}
+                      onClick={() => setAnswers({ ...answers, budget: b.label })}
+                      className={`p-3 rounded-xl border-2 text-left transition-all ${
+                        answers.budget === b.label
+                          ? "border-glow-500 bg-glow-500 text-white shadow-lg shadow-glow-500/25"
+                          : "border-gray-200 hover:border-glow-300 hover:shadow-md"
+                      }`}
+                    >
+                      <div className="font-medium text-sm">{b.label}</div>
+                      <div
+                        className={`text-xs mt-0.5 ${
+                          answers.budget === b.label ? "text-white/80" : "text-gray-400"
+                        }`}
+                      >
+                        {b.desc}
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Buttons */}
             <div className="flex gap-3">
               <button
                 onClick={() => setStep(1)}
@@ -331,7 +370,7 @@ export default function AnalyzePage() {
           </div>
         )}
 
-        {/* ─── STEP 3 ─── */}
+        {/* âââ STEP 3 âââ */}
         {step === 3 && result ? (
           <div className="space-y-4">
             <div className="glass-strong rounded-3xl p-6 text-center">
@@ -412,7 +451,40 @@ export default function AnalyzePage() {
                 </div>
                 <div className="space-y-1">
                   {result.routineSuggestion.evening.map((s: string) => (
-                    <div key={s} className="text-xs text-gray-600">
+                    
+            {/* Product Recommendations */}
+            {result.productRecommendations && result.productRecommendations.length > 0 && (
+              <div className="bg-white/80 backdrop-blur rounded-3xl p-6 shadow-lg border border-gray-100">
+                <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
+                  <ShoppingBag className="w-5 h-5 text-glow-500" />
+                  Recommended Products
+                </h3>
+                <div className="grid gap-3">
+                  {result.productRecommendations.map((product: { name: string; type: string; price: string; reason: string }, idx: number) => (
+                    <div
+                      key={idx}
+                      className="flex items-start gap-3 p-4 rounded-2xl bg-gradient-to-r from-glow-50/50 to-purple-50/50 border border-glow-100"
+                    >
+                      <div className="w-10 h-10 rounded-xl bg-glow-500/10 flex items-center justify-center flex-shrink-0">
+                        <Tag className="w-5 h-5 text-glow-500" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-semibold text-gray-800">{product.name}</span>
+                          <span className="text-xs px-2 py-0.5 rounded-full bg-glow-100 text-glow-700 font-medium">
+                            {product.type}
+                          </span>
+                        </div>
+                        <div className="text-sm text-glow-600 font-medium mt-0.5">{product.price}</div>
+                        <p className="text-sm text-gray-500 mt-1">{product.reason}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+<div key={s} className="text-xs text-gray-600">
                       {s}
                     </div>
                   ))}
@@ -426,7 +498,7 @@ export default function AnalyzePage() {
                 setPreview(null);
                 setImage(null);
                 setResult(null);
-                setAnswers({ skinType: "", concerns: [], ageRange: "", routine: "" });
+                setAnswers({ skinType: "", concerns: [], ageRange: "", routine: "", budget: "" });
               }}
               className="w-full py-4 rounded-2xl border border-gray-200 text-gray-600 font-semibold hover:bg-gray-50 transition-all"
             >
