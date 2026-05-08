@@ -300,44 +300,44 @@ export default function AnalyzePage() {
               </div>
             </div>
 
-            
-              {/* Question 5: Budget */}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-1 flex items-center gap-2">
-                  <Tag className="w-5 h-5 text-glow-500" />
-                  What&apos;s your skincare budget?
-                </h3>
-                <p className="text-sm text-gray-500 mb-3">This helps us recommend products in your price range</p>
-                <div className="grid grid-cols-2 gap-2">
-                  {[
-                    { label: "Budget-Friendly", desc: "Under $15 per product" },
-                    { label: "Mid-Range", desc: "$15 - $40 per product" },
-                    { label: "Premium", desc: "$40 - $80 per product" },
-                    { label: "Luxury", desc: "$80+ per product" },
-                  ].map((b) => (
-                    <button
-                      key={b.label}
-                      onClick={() => setAnswers({ ...answers, budget: b.label })}
-                      className={`p-3 rounded-xl border-2 text-left transition-all ${
-                        answers.budget === b.label
-                          ? "border-glow-500 bg-glow-500 text-white shadow-lg shadow-glow-500/25"
-                          : "border-gray-200 hover:border-glow-300 hover:shadow-md"
+
+            {/* Question 5: Budget */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-1 flex items-center gap-2">
+                <Tag className="w-5 h-5 text-glow-500" />
+                What&apos;s your skincare budget?
+              </h3>
+              <p className="text-sm text-gray-500 mb-3">This helps us recommend products in your price range</p>
+              <div className="grid grid-cols-2 gap-2">
+                {[
+                  { label: "Budget-Friendly", desc: "Under $15 per product" },
+                  { label: "Mid-Range", desc: "$15 - $40 per product" },
+                  { label: "Premium", desc: "$40 - $80 per product" },
+                  { label: "Luxury", desc: "$80+ per product" },
+                ].map((b) => (
+                  <button
+                    key={b.label}
+                    onClick={() => setAnswers({ ...answers, budget: b.label })}
+                    className={`p-3 rounded-xl border-2 text-left transition-all ${
+                      answers.budget === b.label
+                        ? "border-glow-500 bg-glow-500 text-white shadow-lg shadow-glow-500/25"
+                        : "border-gray-200 hover:border-glow-300 hover:shadow-md"
+                    }`}
+                  >
+                    <div className="font-medium text-sm">{b.label}</div>
+                    <div
+                      className={`text-xs mt-0.5 ${
+                        answers.budget === b.label ? "text-white/80" : "text-gray-400"
                       }`}
                     >
-                      <div className="font-medium text-sm">{b.label}</div>
-                      <div
-                        className={`text-xs mt-0.5 ${
-                          answers.budget === b.label ? "text-white/80" : "text-gray-400"
-                        }`}
-                      >
-                        {b.desc}
-                      </div>
-                    </button>
-                  ))}
-                </div>
+                      {b.desc}
+                    </div>
+                  </button>
+                ))}
               </div>
+            </div>
 
-              {/* Buttons */}
+            {/* Buttons */}
             <div className="flex gap-3">
               <button
                 onClick={() => setStep(1)}
@@ -451,7 +451,15 @@ export default function AnalyzePage() {
                 </div>
                 <div className="space-y-1">
                   {result.routineSuggestion.evening.map((s: string) => (
-                    
+                    <div key={s} className="text-xs text-gray-600">
+                      {s}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+
             {/* Product Recommendations */}
             {result.productRecommendations && result.productRecommendations.length > 0 && (
               <div className="bg-white/80 backdrop-blur rounded-3xl p-6 shadow-lg border border-gray-100">
@@ -460,7 +468,7 @@ export default function AnalyzePage() {
                   Recommended Products
                 </h3>
                 <div className="grid gap-3">
-                  {result.productRecommendations.map((product: { name: string; type: string; price: string; reason: string }, idx: number) => (
+                  {result.productRecommendations.map((product: {name: string; type: string; price: string; reason: string}, idx: number) => (
                     <div
                       key={idx}
                       className="flex items-start gap-3 p-4 rounded-2xl bg-gradient-to-r from-glow-50/50 to-purple-50/50 border border-glow-100"
@@ -483,15 +491,6 @@ export default function AnalyzePage() {
                 </div>
               </div>
             )}
-
-<div key={s} className="text-xs text-gray-600">
-                      {s}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
             <button
               onClick={() => {
                 setStep(1);
