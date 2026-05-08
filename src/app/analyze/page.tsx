@@ -125,7 +125,7 @@ export default function AnalyzePage() {
           </div>
         </div>
 
-        {/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ STEP 1 Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ */}
+        {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ STEP 1 ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
         {step === 1 && (
           <div className="max-w-lg mx-auto space-y-4">
             <div
@@ -188,7 +188,7 @@ export default function AnalyzePage() {
           </div>
         )}
 
-        {/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ STEP 2 Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ */}
+        {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ STEP 2 ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
         {step === 2 && (
           <div className="max-w-lg mx-auto space-y-6">
             {/* Q1 */}
@@ -305,7 +305,7 @@ export default function AnalyzePage() {
             <div>
               <h3 className="text-lg font-semibold text-gray-800 mb-1 flex items-center gap-2">
                 <Tag className="w-5 h-5 text-glow-500" />
-                What's your skincare budget?
+                {"What's your skincare budget?"}
               </h3>
               <p className="text-sm text-gray-500 mb-3">This helps us recommend products in your price range</p>
               <div className="grid grid-cols-2 gap-2">
@@ -370,7 +370,7 @@ export default function AnalyzePage() {
           </div>
         )}
 
-        {/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ STEP 3 Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ */}
+        {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ STEP 3 ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
         {step === 3 && result ? (
           <div className="space-y-4">
             <div className="glass-strong rounded-3xl p-6 text-center">
