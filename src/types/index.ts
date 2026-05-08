@@ -8,6 +8,7 @@ export interface SkinAnalysisResult {
     evening: string[];
   };
   overallScore: number;
+    productRecommendations?: { name: string; type: string; price: string; reason: string }[];
 }
 
 export interface RoutineEntry {
