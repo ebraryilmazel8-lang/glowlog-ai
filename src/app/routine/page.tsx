@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useSession, signIn } from "next-auth/react";
 import {
   CalendarCheck,
   Plus,
@@ -32,7 +31,6 @@ const DEFAULT_EVENING_STEPS = [
 ];
 
 export default function RoutinePage() {
-  const { data: session } = useSession();
   const [entries, setEntries] = useState<RoutineEntry[]>([]);
   const [activeTab, setActiveTab] = useState<"morning" | "evening">("morning");
   const [todayEntry, setTodayEntry] = useState<RoutineEntry | null>(null);
@@ -95,7 +93,7 @@ export default function RoutinePage() {
     );
   };
 
-  const updateNotees = (notes: string) => {
+  const updateNotes = (notes: string) => {
     if (!todayEntry) return;
     const updated = { ...todayEntry, notes };
     setTodayEntry(updated);
@@ -123,24 +121,6 @@ export default function RoutinePage() {
     .filter((e) => e.date !== today)
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, 14);
-
-  if (!session) {
-    return (
-      <div className="pt-24 pb-16 px-4 min-h-screen flex items-center justify-center">
-        <div className="text-center glass-strong rounded-3xl p-10 max-w-md">
-          <CalendarCheck className="w-12 h-12 text-sage-400 mx-auto mb-4" />
-          <h2 className="text-2xl font-display font-bold text-gray-900 mb-3">Sign In</h2>
-          <p className="text-gray-500 mb-6">Sign in to track your routine.</p>
-          <button
-            onClick={() => signIn()}
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-glow-400 to-blush-400 text-white font-medium hover:shadow-lg transition-all"
-          >
-            Sign In
-          </button>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="pt-24 pb-16 px-4">
@@ -190,7 +170,7 @@ export default function RoutinePage() {
             <div className="glass-strong rounded-2xl p-5">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-sm font-medium text-gray-700">
-                  Ilerleme
+                  Progress
                 </span>
                 <span className="text-sm text-gray-400">
                   {completedCount}/{totalCount}
@@ -205,7 +185,7 @@ export default function RoutinePage() {
               {progress === 100 && (
                 <div className="flex items-center gap-2 mt-3 text-sage-600 text-sm">
                   <Sparkles className="w-4 h-4" />
-                  Great! You completed today&apos;s routine!
+                  {"Great! You completed today's routine!"}
                 </div>
               )}
             </div>
@@ -256,10 +236,10 @@ export default function RoutinePage() {
               </div>
               <div className="flex justify-center gap-4">
                 {[
-                  { value: 1, icon: <Frown className="w-7 h-7" />, label: "Kotu" },
-                  { value: 2, icon: <Meh className="w-7 h-7" />, label: "Eh" },
-                  { value: 3, icon: <Smile className="w-7 h-7" />, label: "Iyi" },
-                  { value: 4, icon: <Sparkles className="w-7 h-7" />, label: "Harika" },
+                  { value: 1, icon: <Frown className="w-7 h-7" />, label: "Bad" },
+                  { value: 2, icon: <Meh className="w-7 h-7" />, label: "Meh" },
+                  { value: 3, icon: <Smile className="w-7 h-7" />, label: "Good" },
+                  { value: 4, icon: <Sparkles className="w-7 h-7" />, label: "Amazing" },
                 ].map((f) => (
                   <button
                     key={f.value}
@@ -277,12 +257,12 @@ export default function RoutinePage() {
               </div>
             </div>
 
-            {/* Notees */}
+            {/* Notes */}
             <div className="glass-strong rounded-2xl p-5">
-              <div className="text-sm font-medium text-gray-700 mb-2">Notelar</div>
+              <div className="text-sm font-medium text-gray-700 mb-2">Notes</div>
               <textarea
                 value={todayEntry.notes}
-                onChange={(e) => updateNotees(e.target.value)}
+                onChange={(e) => updateNotes(e.target.value)}
                 placeholder="Add a note about your skin today..."
                 className="w-full bg-transparent text-sm text-gray-600 placeholder:text-gray-300 outline-none resize-none h-20"
               />
@@ -301,7 +281,7 @@ export default function RoutinePage() {
               {activeTab === "morning" ? "Morning" : "Evening"} Routine
             </h3>
             <p className="text-sm text-gray-400 mb-6">
-              You haven&apos;t started today&apos;s {activeTab === "morning" ? "morning" : "evening"} routine yet.
+              {"You haven't started today's"} {activeTab === "morning" ? "morning" : "evening"} routine yet.
             </p>
             <button
               onClick={startRoutine}
