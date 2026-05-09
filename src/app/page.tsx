@@ -119,7 +119,7 @@ export default function Home() {
           </div>
 
           {/* Hero visual */}
-          <div className="mt-16 max-w-4xl mx-auto reveal-scale">
+          <div className="mt-16 max-w-4xl mx-auto reveal">
             <div className="glass-strong rounded-3xl p-6 sm:p-8 shadow-2xl card-hover">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="sm:col-span-1 flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-glow-50 to-blush-50 border border-glow-100">
@@ -315,7 +315,7 @@ export default function Home() {
       {/* Final CTA */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="reveal-scale">
+          <div className="reveal">
             <div className="glass-strong rounded-3xl p-10 sm:p-16 text-center relative overflow-hidden card-hover">
               <div className="absolute inset-0 bg-gradient-to-br from-glow-100/40 via-blush-100/30 to-sage-100/40" />
               <div className="relative">
