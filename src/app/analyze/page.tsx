@@ -1,8 +1,8 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   Camera, Upload, Loader2, Sparkles, Droplets,
-  AlertCircle, CheckCircle2, Sun, Moon, X, ChevronRight, ArrowLeft, Tag, ShoppingBag,
+  AlertCircle, CheckCircle2, Sun, Moon, X, ChevronRight, ArrowLeft, Tag, ShoppingBag, Lock, Crown,
 } from "lucide-react";
 import type { SkinAnalysisResult } from "@/types";
 
@@ -21,6 +21,13 @@ export default function AnalyzePage() {
     budget: "",
   });
   const fileRef = useRef<HTMLInputElement>(null);
+  const FREE_ANALYSIS_KEY = "glowlog-analysis-count";
+  const [hasUsedFree, setHasUsedFree] = useState(false);
+
+  useEffect(() => {
+    const count = parseInt(localStorage.getItem(FREE_ANALYSIS_KEY) || "0", 10);
+    if (count >= 1) setHasUsedFree(true);
+  }, []);
 
   const handleFile = (file: File) => {
     if (!file.type.startsWith("image/")) { setError("Please upload an image file."); return; }
@@ -88,6 +95,10 @@ export default function AnalyzePage() {
       const data = await res.json();
       setResult(data);
       saveToHistory(data);
+      // Increment usage counter
+      const currentCount = parseInt(localStorage.getItem(FREE_ANALYSIS_KEY) || "0", 10);
+      localStorage.setItem(FREE_ANALYSIS_KEY, String(currentCount + 1));
+      setHasUsedFree(true);
       setStep(3);
     } catch (err: any) {
       setError(err.message || "Something went wrong.");
@@ -146,8 +157,47 @@ export default function AnalyzePage() {
           </div>
         </div>
 
+        
+        {/* PAYWALL - Premium Required */}
+        {hasUsedFree && step !== 3 && (
+          <div className="max-w-lg mx-auto">
+            <div className="glass-strong rounded-3xl p-8 text-center space-y-4">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-amber-400 to-orange-400 flex items-center justify-center mx-auto">
+                <Crown className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-2xl font-display font-bold text-gray-900">
+                Premium Analysis
+              </h2>
+              <p className="text-gray-500 max-w-sm mx-auto">
+                {"You've used your free analysis! Upgrade to Premium for unlimited AI skin analyses, detailed reports, and personalized product recommendations."}
+              </p>
+              <div className="bg-gradient-to-r from-glow-50 to-blush-50 rounded-2xl p-4 space-y-2">
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <CheckCircle2 className="w-4 h-4 text-sage-400" /> Unlimited AI analyses
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <CheckCircle2 className="w-4 h-4 text-sage-400" /> Detailed skin reports
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <CheckCircle2 className="w-4 h-4 text-sage-400" /> Product recommendations
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <CheckCircle2 className="w-4 h-4 text-sage-400" /> Progress tracking
+                </div>
+              </div>
+              <button
+                className="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 text-white font-semibold text-lg hover:shadow-lg hover:shadow-amber-400/30 transition-all flex items-center justify-center gap-2"
+                onClick={() => window.open("mailto:ebraryilmazel8@gmail.com?subject=GlowLog Premium Access", "_blank")}
+              >
+                <Lock className="w-5 h-5" /> Get Premium Access
+              </button>
+              <p className="text-xs text-gray-400">Contact us to unlock premium features</p>
+            </div>
+          </div>
+        )}
+
         {/* STEP 1 */}
-        {step === 1 && (
+        {!hasUsedFree && step === 1 && (
           <div className="max-w-lg mx-auto space-y-4">
             <div
               onClick={() => fileRef.current?.click()}
@@ -210,7 +260,7 @@ export default function AnalyzePage() {
         )}
 
         {/* STEP 2 */}
-        {step === 2 && (
+        {!hasUsedFree && step === 2 && (
           <div className="max-w-lg mx-auto space-y-6">
             {/* Q1 */}
             <div className="glass-strong rounded-2xl p-5">
