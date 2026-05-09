@@ -66,6 +66,73 @@ function AnimatedCounter({ target, suffix = "" }: { target: string; suffix?: str
 }
 
 // Scroll reveal hook
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import {
+  Sparkles,
+  Camera,
+  ArrowRight,
+  Droplets,
+  Shield,
+  Leaf,
+  ChevronDown,
+  Upload,
+  Sun,
+  Moon,
+  TrendingUp,
+  BookOpen,
+  Crown,
+  Lock,
+  CheckCircle2,
+  Zap,
+  Eye,
+  Smartphone,
+  X,
+  Heart,
+} from "lucide-react";
+
+// Animated counter component
+function AnimatedCounter({ target, suffix = "" }: { target: string; suffix?: string }) {
+  const [count, setCount] = useState("0");
+  const ref = useRef<HTMLSpanElement>(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true;
+          const numericTarget = parseInt(target.replace(/[^0-9]/g, ""));
+          const duration = 2000;
+          const steps = 60;
+          const increment = numericTarget / steps;
+          let current = 0;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= numericTarget) {
+              setCount(target);
+              clearInterval(timer);
+            } else {
+              setCount(Math.floor(current).toString());
+            }
+          }, duration / steps);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [target]);
+
+  return (
+    <span ref={ref} className="tabular-nums">
+      {count}
+      {suffix}
+    </span>
+  );
+}
+
+// Scroll reveal hook
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -114,7 +181,7 @@ export default function Home() {
         <div className="absolute top-20 left-10 w-72 h-72 bg-glow-200/30 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-blush-200/20 rounded-full blur-3xl animate-float-delayed" />
 
-        <div className={`relative max-w-4xl mx-auto text-center transition-all duration-1000 ${hero.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+        <div className="relative max-w-4xl mx-auto text-center transition-all duration-1000 opacity-100 translate-y-0">
           {/* Pill badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur border border-glow-200/50 text-sm font-medium text-gray-700 mb-6 shadow-sm">
             <Sparkles className="w-4 h-4 text-glow-500" />
