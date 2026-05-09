@@ -45,6 +45,25 @@ export default function AnalyzePage() {
     }));
   };
 
+  const saveToHistory = (analysisResult: SkinAnalysisResult) => {
+    try {
+      const historyKey = "glowlog-analysis-history";
+      const existing = JSON.parse(localStorage.getItem(historyKey) || "[]");
+      const entry = {
+        id: `analysis-${Date.now()}`,
+        date: new Date().toISOString(),
+        answers: { ...answers },
+        result: analysisResult,
+      };
+      existing.unshift(entry);
+      // Keep max 50 entries
+      if (existing.length > 50) existing.length = 50;
+      localStorage.setItem(historyKey, JSON.stringify(existing));
+    } catch {
+      // Silently fail if localStorage is full
+    }
+  };
+
   const analyze = async () => {
     if (!image) return;
     setLoading(true);
@@ -66,7 +85,9 @@ export default function AnalyzePage() {
         }),
       });
       if (!res.ok) throw new Error("Analysis failed.");
-      setResult(await res.json());
+      const data = await res.json();
+      setResult(data);
+      saveToHistory(data);
       setStep(3);
     } catch (err: any) {
       setError(err.message || "Something went wrong.");
@@ -125,7 +146,7 @@ export default function AnalyzePage() {
           </div>
         </div>
 
-        {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ STEP 1 ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
+        {/* STEP 1 */}
         {step === 1 && (
           <div className="max-w-lg mx-auto space-y-4">
             <div
@@ -160,7 +181,7 @@ export default function AnalyzePage() {
                 <div className="flex flex-col items-center justify-center h-80 text-center p-6">
                   <Upload className="w-10 h-10 text-blush-300 mb-4" />
                   <p className="font-medium text-gray-700 mb-1">Upload your photo</p>
-                  <p className="text-sm text-gray-400">Click or drag &amp; drop &middot; Max 10MB</p>
+                  <p className="text-sm text-gray-400">Click or drag & drop Â· Max 10MB</p>
                 </div>
               )}
             </div>
@@ -188,7 +209,7 @@ export default function AnalyzePage() {
           </div>
         )}
 
-        {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ STEP 2 ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
+        {/* STEP 2 */}
         {step === 2 && (
           <div className="max-w-lg mx-auto space-y-6">
             {/* Q1 */}
@@ -300,7 +321,6 @@ export default function AnalyzePage() {
               </div>
             </div>
 
-
             {/* Question 5: Budget */}
             <div>
               <h3 className="text-lg font-semibold text-gray-800 mb-1 flex items-center gap-2">
@@ -370,7 +390,7 @@ export default function AnalyzePage() {
           </div>
         )}
 
-        {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ STEP 3 ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
+        {/* STEP 3 */}
         {step === 3 && result ? (
           <div className="space-y-4">
             <div className="glass-strong rounded-3xl p-6 text-center">
@@ -458,7 +478,6 @@ export default function AnalyzePage() {
                 </div>
               </div>
             </div>
-
 
             {/* Product Recommendations */}
             {result.productRecommendations && result.productRecommendations.length > 0 && (
