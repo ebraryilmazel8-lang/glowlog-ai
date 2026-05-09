@@ -154,7 +154,7 @@ export default function HistoryPage() {
                         </div>
                         <div>
                           <div className="font-semibold text-gray-900 text-sm">
-                            {r.skinType} Skin Â· {r.hydrationLevel} Hydration
+                            {r.skinType} Skin · {r.hydrationLevel} Hydration
                           </div>
                           <div className="text-xs text-gray-400 mt-0.5">
                             {formatDate(entry.date)}
