@@ -1,10 +1,12 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X, Sparkles } from "lucide-react";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-strong">
@@ -23,19 +25,19 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-1">
             <Link
               href="/analyze"
-              className="px-4 py-2 rounded-xl text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 transition-all"
+              className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pathname === "/analyze" ? "text-gray-900 bg-white/70 shadow-sm" : "text-gray-600 hover:text-gray-900 hover:bg-white/50"}`}
             >
               Skin Analysis
             </Link>
             <Link
               href="/routine"
-              className="px-4 py-2 rounded-xl text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 transition-all"
+              className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pathname === "/routine" ? "text-gray-900 bg-white/70 shadow-sm" : "text-gray-600 hover:text-gray-900 hover:bg-white/50"}`}
             >
               Routine Tracker
             </Link>
             <Link
               href="/history"
-              className="px-4 py-2 rounded-xl text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 transition-all"
+              className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pathname === "/history" ? "text-gray-900 bg-white/70 shadow-sm" : "text-gray-600 hover:text-gray-900 hover:bg-white/50"}`}
             >
               History
             </Link>
@@ -55,21 +57,21 @@ export function Navbar() {
           <div className="md:hidden py-3 border-t border-white/20">
             <Link
               href="/analyze"
-              className="block px-4 py-2 rounded-xl text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50"
+              className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${pathname === "/analyze" ? "text-gray-900 bg-white/70" : "text-gray-600 hover:text-gray-900 hover:bg-white/50"}`}
               onClick={() => setMenuOpen(false)}
             >
               Skin Analysis
             </Link>
             <Link
               href="/routine"
-              className="block px-4 py-2 rounded-xl text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50"
+              className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${pathname === "/routine" ? "text-gray-900 bg-white/70" : "text-gray-600 hover:text-gray-900 hover:bg-white/50"}`}
               onClick={() => setMenuOpen(false)}
             >
               Routine Tracker
             </Link>
             <Link
               href="/history"
-              className="block px-4 py-2 rounded-xl text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50"
+              className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${pathname === "/history" ? "text-gray-900 bg-white/70" : "text-gray-600 hover:text-gray-900 hover:bg-white/50"}`}
               onClick={() => setMenuOpen(false)}
             >
               History
