@@ -187,11 +187,11 @@ export default function AnalyzePage() {
               </div>
               <button
                 className="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 text-white font-semibold text-lg hover:shadow-lg hover:shadow-amber-400/30 transition-all flex items-center justify-center gap-2"
-                onClick={() => window.open("mailto:ebraryilmazel8@gmail.com?subject=GlowLog Premium Access", "_blank")}
+                onClick={() => window.open("https://glowlog.lemonsqueezy.com/checkout/buy/a53c85e9-3150-4efc-acab-e91af26ab7a6", "_blank")}
               >
                 <Lock className="w-5 h-5" /> Get Premium Access
               </button>
-              <p className="text-xs text-gray-400">Contact us to unlock premium features</p>
+              <p className="text-xs text-gray-400">169.99 TL/month - Cancel anytime</p>
             </div>
           </div>
         )}
