@@ -7,7 +7,7 @@ import {
 import type { SkinAnalysisResult } from "@/types";
 
 export default function AnalyzePage() {
-  const [image, setImage] = useState<string | null>(null);
+  const [image, setImage] = useState<string | null>(null)
   const [preview, setPreview] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<SkinAnalysisResult | null>(null);
@@ -181,7 +181,7 @@ export default function AnalyzePage() {
                 <div className="flex flex-col items-center justify-center h-80 text-center p-6">
                   <Upload className="w-10 h-10 text-blush-300 mb-4" />
                   <p className="font-medium text-gray-700 mb-1">Upload your photo</p>
-                  <p className="text-sm text-gray-400">Click or drag & drop Â· Max 10MB</p>
+                  <p className="text-sm text-gray-400">Click or drag & drop - Max 10MB</p>
                 </div>
               )}
             </div>
