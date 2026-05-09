@@ -191,7 +191,7 @@ export default function AnalyzePage() {
               >
                 <Lock className="w-5 h-5" /> Get Premium Access
               </button>
-              <p className="text-xs text-gray-400">169.99 TL/month - Cancel anytime</p>
+              <p className="text-xs text-gray-400">$4.99/month — Cancel anytime</p>
             </div>
           </div>
         )}
