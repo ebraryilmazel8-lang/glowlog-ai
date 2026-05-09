@@ -276,9 +276,10 @@ export default function Home() {
             <div className="flex items-center gap-6 text-sm text-gray-400">
               <Link href="/analyze" className="hover:text-gray-600 transition-colors">Analysis</Link>
               <Link href="/routine" className="hover:text-gray-600 transition-colors">Routine</Link>
+              <Link href="/history" className="hover:text-gray-600 transition-colors">History</Link>
               <span>Built with Gemini AI</span>
             </div>
-            <p className="text-sm text-gray-400">&copy; 2024 Glow Log. All rights reserved.</p>
+            <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} Glow Log. All rights reserved.</p>
           </div>
         </div>
       </footer>
