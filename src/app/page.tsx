@@ -17,26 +17,6 @@ import {
   BookOpen,
 } from "lucide-react";
 
-// Intersection Observer hook for scroll animations
-function useReveal() {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add("visible");
-          observer.unobserve(el);
-        }
-      },
-      { threshold: 0.15 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-  return ref;
-}
 
 // Animated counter component
 function AnimatedCounter({ target, suffix = "" }: { target: string; suffix?: string }) {
@@ -76,14 +56,24 @@ function AnimatedCounter({ target, suffix = "" }: { target: string; suffix?: str
 }
 
 export default function Home() {
-  const heroRef = useReveal();
-  const statsRef = useReveal();
-  const howRef = useReveal();
-  const featuresRef = useReveal();
-  const knowledgeRef = useReveal();
-  const faqRef = useReveal();
-  const ctaRef = useReveal();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  // Global scroll reveal observer for all .reveal elements
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="relative overflow-hidden">
@@ -95,7 +85,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative pt-32 pb-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <div ref={heroRef} className="reveal text-center max-w-3xl mx-auto">
+          <div className="reveal text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-glow-100/60 text-glow-600 text-sm font-medium mb-6 backdrop-blur-sm">
               <Sparkles className="w-4 h-4" />
               Powered by Google Gemini AI
@@ -178,7 +168,7 @@ export default function Home() {
 
       {/* Stats Bar - Animated Counters */}
       <section className="py-12 px-4 border-y border-gray-100/50">
-        <div ref={statsRef} className="reveal max-w-6xl mx-auto">
+        <div className="reveal max-w-6xl mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl font-bold text-gray-900"><AnimatedCounter target="50" suffix="K+" /></div>
@@ -203,7 +193,7 @@ export default function Home() {
       {/* How It Works */}
       <section id="how-it-works" className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <div ref={howRef} className="reveal text-center mb-16">
+          <div className="reveal text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">How It Works</h2>
             <p className="text-gray-500 max-w-xl mx-auto">Three simple steps to understand your skin better than ever before.</p>
           </div>
@@ -231,7 +221,7 @@ export default function Home() {
       {/* Features */}
       <section className="py-24 px-4 bg-gradient-to-b from-white/0 via-glow-50/30 to-white/0">
         <div className="max-w-6xl mx-auto">
-          <div ref={featuresRef} className="reveal text-center mb-16">
+          <div className="reveal text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Everything Your Skin Needs</h2>
             <p className="text-gray-500 max-w-xl mx-auto">Comprehensive AI-powered skincare tools designed to give you clarity and confidence.</p>
           </div>
@@ -264,7 +254,7 @@ export default function Home() {
       {/* Skincare Knowledge Hub */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <div ref={knowledgeRef} className="reveal text-center mb-16">
+          <div className="reveal text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Skincare Knowledge Hub</h2>
             <p className="text-gray-500 max-w-xl mx-auto">Expert-backed insights to help you build the perfect routine.</p>
           </div>
@@ -293,7 +283,7 @@ export default function Home() {
       {/* FAQ - Interactive Accordion */}
       <section className="py-24 px-4">
         <div className="max-w-3xl mx-auto">
-          <div ref={faqRef} className="reveal text-center mb-16">
+          <div className="reveal text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-3">
@@ -325,7 +315,7 @@ export default function Home() {
       {/* Final CTA */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <div ref={ctaRef} className="reveal-scale">
+          <div className="reveal-scale">
             <div className="glass-strong rounded-3xl p-10 sm:p-16 text-center relative overflow-hidden card-hover">
               <div className="absolute inset-0 bg-gradient-to-br from-glow-100/40 via-blush-100/30 to-sage-100/40" />
               <div className="relative">
