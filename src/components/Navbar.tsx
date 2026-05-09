@@ -33,6 +33,12 @@ export function Navbar() {
             >
               Routine Tracker
             </Link>
+            <Link
+              href="/history"
+              className="px-4 py-2 rounded-xl text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 transition-all"
+            >
+              History
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -60,6 +66,13 @@ export function Navbar() {
               onClick={() => setMenuOpen(false)}
             >
               Routine Tracker
+            </Link>
+            <Link
+              href="/history"
+              className="block px-4 py-2 rounded-xl text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50"
+              onClick={() => setMenuOpen(false)}
+            >
+              History
             </Link>
           </div>
         )}
