@@ -169,7 +169,7 @@ export default function Home() {
       {/* Stats Bar - Animated Counters */}
       <section className="py-12 px-4 border-y border-gray-100/50">
         <div className="reveal max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-3xl font-bold text-gray-900"><AnimatedCounter target="50" suffix="K+" /></div>
               <div className="text-sm text-gray-500 mt-1">Skin Analyses</div>
@@ -288,7 +288,7 @@ export default function Home() {
           </div>
           <div className="space-y-3">
             {[
-              { q: "Is the skin analysis really free?", a: "Yes! You can analyze your skin without creating an account. We believe everyone deserves access to AI-powered skincare insights." },
+              { q: "Is the first skin analysis free?", a: "Yes! Your first analysis is completely free. After that, upgrade to Premium for unlimited analyses, detailed reports, and personalized product recommendations." },
               { q: "How accurate is the AI analysis?", a: "Our AI is powered by Google Gemini and has a 92% accuracy rate for skin type detection. However, it is not a replacement for professional dermatological advice." },
               { q: "Is my photo stored or shared?", a: "No. Your photo is processed in real-time and is never stored on our servers. We take your privacy seriously." },
               { q: "What should I do with my results?", a: "Use your personalized routine as a starting guide. Introduce new products one at a time and give each product 4-6 weeks before judging results." },
