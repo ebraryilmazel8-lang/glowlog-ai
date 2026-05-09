@@ -15,8 +15,10 @@ import {
   Moon,
   TrendingUp,
   BookOpen,
+  Crown,
+  Lock,
+  CheckCircle2,
 } from "lucide-react";
-
 
 // Animated counter component
 function AnimatedCounter({ target, suffix = "" }: { target: string; suffix?: string }) {
@@ -58,7 +60,6 @@ function AnimatedCounter({ target, suffix = "" }: { target: string; suffix?: str
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  // Global scroll reveal observer for all .reveal elements
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -166,7 +167,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Bar - Animated Counters */}
+      {/* Stats Bar */}
       <section className="py-12 px-4 border-y border-gray-100/50">
         <div className="reveal max-w-6xl mx-auto">
           <div className="grid grid-cols-3 gap-8 text-center">
@@ -251,6 +252,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Premium CTA */}
+      <section className="py-24 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="reveal">
+            <div className="relative rounded-3xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-400 via-orange-400 to-rose-400" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.2),transparent_60%)]" />
+              <div className="relative px-8 py-14 sm:px-16 sm:py-20 text-center">
+                <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-6">
+                  <Crown className="w-10 h-10 text-white" />
+                </div>
+                <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mb-4">
+                  Unlock Your Full Skin Potential
+                </h2>
+                <p className="text-white/80 max-w-lg mx-auto mb-8 text-lg leading-relaxed">
+                  Go beyond a single analysis. Get unlimited insights, track your progress, and build the perfect routine.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl mx-auto mb-10">
+                  {[
+                    "Unlimited AI Analyses",
+                    "Routine Tracker",
+                    "Full Analysis History",
+                    "Progress Tracking",
+                    "Product Recommendations",
+                    "Skin Trends & Insights",
+                  ].map((feature) => (
+                    <div key={feature} className="flex items-center gap-2 text-white/90 text-sm">
+                      <CheckCircle2 className="w-4 h-4 text-white flex-shrink-0" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <button
+                  onClick={() => window.open("https://glowlog.lemonsqueezy.com/checkout/buy/a53c85e9-3150-4efc-acab-e91af26ab7a6", "_blank")}
+                  className="inline-flex items-center gap-3 px-10 py-5 bg-white text-orange-500 rounded-2xl font-bold text-lg shadow-2xl shadow-black/20 hover:shadow-3xl hover:-translate-y-1 transition-all"
+                >
+                  <Lock className="w-5 h-5" />
+                  Get Premium — $4.99/mo
+                </button>
+                <p className="text-white/60 text-sm mt-4">Cancel anytime · Instant access · Secure checkout</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Skincare Knowledge Hub */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
@@ -280,7 +327,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ - Interactive Accordion */}
+      {/* FAQ */}
       <section className="py-24 px-4">
         <div className="max-w-3xl mx-auto">
           <div className="reveal text-center mb-16">
