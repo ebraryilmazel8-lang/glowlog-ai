@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Glow Log",
+  title: "Privacy Policy â Glow Log",
   description: "Learn how Glow Log handles your data, photos, and privacy. We never store your selfies on our servers.",
 };
 
@@ -192,10 +192,10 @@ export default function PrivacyPolicyPage() {
               If you have any questions about this Privacy Policy, please contact us
               at{" "}
               <a
-                href="mailto:privacy@glowlog.app"
+                href="mailto:glowlogcontact@gmail.com"
                 className="text-rose-600 hover:text-rose-700 underline"
               >
-                privacy@glowlog.app
+                glowlogcontact@gmail.com
               </a>
               .
             </p>
