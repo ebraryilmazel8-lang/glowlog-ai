@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import {
   Camera, Upload, Loader2, Sparkles, Droplets,
-  AlertCircle, CheckCircle2, Sun, Moon, X, ChevronRight, ArrowLeft, Tag, ShoppingBag, Lock, Crown,
+  AlertCircle, CheckCircle2, Sun, Moon, X, ChevronRight, ArrowLeft, Tag, ShoppingBag, Lock, Crown, ExternalLink,
 } from "lucide-react";
 import type { SkinAnalysisResult } from "@/types";
 
@@ -537,11 +537,14 @@ export default function AnalyzePage() {
                   Recommended Products
                 </h3>
                 <div className="grid gap-3">
-                  {result.productRecommendations.map((product: {name: string; type: string; price: string; reason: string}, idx: number) => (
-                    <div
-                      key={idx}
-                      className="flex items-start gap-3 p-4 rounded-2xl bg-gradient-to-r from-glow-50/50 to-purple-50/50 border border-glow-100"
-                    >
+                  {result.productRecommendations.map((product: {name: string; type: string; price: string; reason: string; amazonSearchQuery?: string}, idx: number) => (
+                    <a
+                    key={idx}
+                    href={`https://www.amazon.com/s?k=${encodeURIComponent(product.amazonSearchQuery || product.name)}&tag=glowlog-20`}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="flex items-start gap-3 p-4 rounded-2xl bg-gradient-to-r from-glow-50/50 to-purple-50/50 border border-glow-100 hover:shadow-md hover:border-glow-200 transition-all group cursor-pointer"
+                  >
                       <div className="w-10 h-10 rounded-xl bg-glow-500/10 flex items-center justify-center flex-shrink-0">
                         <Tag className="w-5 h-5 text-glow-500" />
                       </div>
@@ -554,12 +557,22 @@ export default function AnalyzePage() {
                         </div>
                         <div className="text-sm text-glow-600 font-medium mt-0.5">{product.price}</div>
                         <p className="text-sm text-gray-500 mt-1">{product.reason}</p>
+                        <div className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-amber-600 bg-amber-50 px-3 py-1 rounded-full group-hover:bg-amber-100 transition-colors">
+                          <ShoppingBag className="w-3 h-3" /> Shop on Amazon <ExternalLink className="w-3 h-3" />
+                        </div>
                       </div>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </div>
             )}
+            {/* Affiliate Disclosure */}
+            {result.productRecommendations && result.productRecommendations.length > 0 && (
+              <p className="text-xs text-gray-400 text-center italic">
+                As an Amazon Associate, we may earn from qualifying purchases. This doesn&apos;t affect our recommendations.
+              </p>
+            )}
+
             <button
               onClick={() => {
                 setStep(1);
