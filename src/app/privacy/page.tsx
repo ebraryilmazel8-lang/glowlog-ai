@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy â Glow Log",
+    title: "Privacy Policy — Glow Log",
   description: "Learn how Glow Log handles your data, photos, and privacy. We never store your selfies on our servers.",
 };
 
