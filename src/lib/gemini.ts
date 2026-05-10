@@ -56,7 +56,8 @@ Return ONLY valid JSON with this exact structure:
       "name": "Product Name by Brand",
       "type": "cleanser" | "toner" | "serum" | "moisturizer" | "sunscreen" | "treatment" | "mask",
       "price": "$XX",
-      "reason": "Why this product is good for the user"
+      "reason": "Why this product is good for the user",
+      "amazonSearchQuery": "search-friendly product name for Amazon (e.g. CeraVe Hydrating Facial Cleanser)"
     }
   ],
   "overallScore": 75
@@ -67,6 +68,7 @@ For productRecommendations:
 - Match the budget: "Budget-Friendly" = drugstore under $15, "Mid-Range" = $15-40, "Premium" = $40-80, "Luxury" = $80+
 - Each product must be a real product that actually exists
 - Include a mix of product types (cleanser, serum, moisturizer, sunscreen at minimum)
+- For amazonSearchQuery: provide the exact product name + brand that would find it on Amazon search (e.g. "CeraVe Hydrating Facial Cleanser 16 oz")
 ${userContext}
 Be encouraging, specific, and helpful. The overallScore should be 1-100.`;
 
