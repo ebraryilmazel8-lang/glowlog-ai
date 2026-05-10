@@ -23,7 +23,7 @@ export function Navbar() {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "nav-scrolled gradient-border" : "nav-top"}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || menuOpen ? "nav-scrolled gradient-border" : "nav-top"}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 group">
@@ -69,7 +69,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden py-3 border-t border-white/20 animate-in">
+        <div className="md:hidden py-3 px-2 border-t border-white/20 animate-in bg-white/95 backdrop-blur-xl shadow-lg">
           {navLinks.map((link) => (
             <Link
               key={link.href}
