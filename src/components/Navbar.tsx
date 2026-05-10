@@ -20,6 +20,7 @@ export function Navbar() {
     { href: "/analyze", label: "Skin Analysis" },
     { href: "/routine", label: "Routine Tracker" },
     { href: "/history", label: "History" },
+    { href: "/blog", label: "Glow Guide" },
   ];
 
   return (
