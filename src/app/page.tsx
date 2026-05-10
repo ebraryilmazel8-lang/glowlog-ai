@@ -22,6 +22,7 @@ import {
   Smartphone,
   X,
   Heart,
+  Mail,
 } from "lucide-react";
 
 // Animated counter component
@@ -82,6 +83,9 @@ function useReveal() {
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+  const [subscribing, setSubscribing] = useState(false);
   const hero = useReveal();
   const stats = useReveal();
   const howItWorks = useReveal();
@@ -91,7 +95,29 @@ export default function Home() {
   const premium = useReveal();
   const knowledge = useReveal();
   const faq = useReveal();
+  const emailCapture = useReveal();
   const finalCta = useReveal();
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || subscribing) return;
+    setSubscribing(true);
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      if (res.ok) {
+        setSubscribed(true);
+        setEmail("");
+      }
+    } catch {
+      // silently fail
+    } finally {
+      setSubscribing(false);
+    }
+  };
 
   const faqItems = [
     { q: "Is the skin analysis really free?", a: "Yes! Your first analysis is completely free — no account, no credit card, no strings attached. Premium unlocks unlimited analyses for $4.99/month." },
@@ -340,6 +366,66 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* EMAIL CAPTURE */}
+      <section
+        ref={emailCapture.ref}
+        className="py-20 px-4 bg-gradient-to-br from-glow-50/40 via-white to-blush-50/40"
+      >
+        <div className={`max-w-3xl mx-auto text-center transition-all duration-700 ${emailCapture.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+          <div className="bg-white rounded-3xl p-10 sm:p-14 shadow-lg border border-glow-100/50 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-glow-400 via-blush-400 to-glow-400" />
+            
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-glow-400 to-blush-400 flex items-center justify-center mx-auto mb-6">
+              <Mail className="w-7 h-7 text-white" />
+            </div>
+            
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+              Get Weekly Skincare Tips
+            </h2>
+            <p className="text-gray-600 max-w-lg mx-auto mb-8 leading-relaxed">
+              Science-backed routines, ingredient breakdowns, and seasonal skincare advice — delivered every Tuesday. Free forever.
+            </p>
+
+            {subscribed ? (
+              <div className="flex items-center justify-center gap-2 text-emerald-600 font-semibold py-4">
+                <CheckCircle2 className="w-5 h-5" />
+                You&apos;re in! Check your inbox for a welcome email.
+              </div>
+            ) : (
+              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@email.com"
+                  required
+                  className="flex-1 px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-glow-400/50 focus:border-glow-300 transition-all"
+                />
+                <button
+                  type="submit"
+                  disabled={subscribing}
+                  className="px-6 py-3.5 bg-gradient-to-r from-glow-400 to-blush-400 text-white rounded-xl font-semibold shadow-md shadow-glow-400/20 hover:shadow-lg hover:scale-105 transition-all disabled:opacity-60 disabled:hover:scale-100 flex items-center justify-center gap-2 whitespace-nowrap"
+                >
+                  {subscribing ? (
+                    <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  ) : (
+                    <>
+                      Subscribe
+                      <ArrowRight className="w-4 h-4" />
+                    </>
+                  )}
+                </button>
+              </form>
+            )}
+
+            <p className="mt-5 text-xs text-gray-400">
+              No spam, ever. Unsubscribe anytime. We respect your privacy.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ═══════════ PREMIUM ═══════════ */}
       <section
         ref={premium.ref}
@@ -554,6 +640,7 @@ export default function Home() {
             <div>
               <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Resources</h4>
               <ul className="space-y-2 text-sm">
+                <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
                 <li><a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Skincare Guide</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Ingredient Glossary</a></li>
