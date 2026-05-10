@@ -110,7 +110,7 @@ export default function Home() {
         ref={hero.ref}
         className="relative pt-28 pb-20 px-4 overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-glow-50 via-white to-blush-50" />
+        <div className="absolute inset-0 bg-gradient-to-br from-glow-50/30 via-transparent to-blush-50/30" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-glow-200/30 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-blush-200/20 rounded-full blur-3xl animate-float-delayed" />
 
@@ -170,7 +170,7 @@ export default function Home() {
       {/* ═══════════ STATS BAR ═══════════ */}
       <section
         ref={stats.ref}
-        className="py-8 border-y border-gray-100 bg-white/50"
+        className="py-8 border-y border-gray-100/50 bg-white/40 backdrop-blur-sm"
       >
         <div className={`max-w-4xl mx-auto px-4 grid grid-cols-3 gap-8 text-center transition-all duration-700 ${stats.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
           <div>
@@ -198,7 +198,7 @@ export default function Home() {
       <section
         id="how-it-works"
         ref={howItWorks.ref}
-        className="py-20 px-4 bg-gradient-to-b from-white to-gray-50/50"
+        className="py-20 px-4 bg-white/40 backdrop-blur-sm"
       >
         <div className={`max-w-5xl mx-auto transition-all duration-700 ${howItWorks.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="text-center mb-14">
@@ -234,7 +234,7 @@ export default function Home() {
       {/* ═══════════ WHY GLOW LOG ═══════════ */}
       <section
         ref={whyGlow.ref}
-        className="py-20 px-4 bg-white"
+        className="py-20 px-4 bg-white/60 backdrop-blur-sm"
       >
         <div className={`max-w-5xl mx-auto transition-all duration-700 ${whyGlow.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="text-center mb-14">
@@ -272,7 +272,7 @@ export default function Home() {
       {/* ═══════════ FEATURES ═══════════ */}
       <section
         ref={features.ref}
-        className="py-20 px-4 bg-gradient-to-b from-gray-50/50 to-white"
+        className="py-20 px-4 bg-white/40 backdrop-blur-sm"
       >
         <div className={`max-w-5xl mx-auto transition-all duration-700 ${features.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="text-center mb-14">
@@ -306,7 +306,7 @@ export default function Home() {
       {/* ═══════════ PRIVACY TRUST ═══════════ */}
       <section
         ref={privacy.ref}
-        className="py-20 px-4 bg-white"
+        className="py-20 px-4 bg-white/60 backdrop-blur-sm"
       >
         <div className={`max-w-4xl mx-auto transition-all duration-700 ${privacy.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-10 sm:p-14 text-center overflow-hidden">
@@ -343,7 +343,7 @@ export default function Home() {
       {/* ═══════════ PREMIUM ═══════════ */}
       <section
         ref={premium.ref}
-        className="py-20 px-4 bg-gradient-to-b from-white to-amber-50/30"
+        className="py-20 px-4 bg-gradient-to-b from-white/70 to-amber-50/20 backdrop-blur-sm"
       >
         <div className={`max-w-4xl mx-auto transition-all duration-700 ${premium.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-10 sm:p-14 border border-amber-200/50 overflow-hidden">
@@ -412,7 +412,7 @@ export default function Home() {
       {/* ═══════════ KNOWLEDGE HUB ═══════════ */}
       <section
         ref={knowledge.ref}
-        className="py-20 px-4 bg-white"
+        className="py-20 px-4 bg-white/60 backdrop-blur-sm"
       >
         <div className={`max-w-5xl mx-auto transition-all duration-700 ${knowledge.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="text-center mb-14">
@@ -450,7 +450,7 @@ export default function Home() {
       {/* ═══════════ FAQ ═══════════ */}
       <section
         ref={faq.ref}
-        className="py-20 px-4 bg-gray-50/50"
+        className="py-20 px-4 bg-white/30 backdrop-blur-sm"
       >
         <div className={`max-w-3xl mx-auto transition-all duration-700 ${faq.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="text-center mb-14">
@@ -481,7 +481,7 @@ export default function Home() {
       {/* ═══════════ FINAL CTA — FREE ANALYSIS ═══════════ */}
       <section
         ref={finalCta.ref}
-        className="py-24 px-4 bg-gradient-to-br from-glow-50 via-white to-blush-50 relative overflow-hidden"
+        className="py-24 px-4 bg-gradient-to-br from-glow-50/30 via-transparent to-blush-50/30 relative overflow-hidden"
       >
         <div className="absolute top-10 left-1/4 w-64 h-64 bg-glow-200/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-blush-200/20 rounded-full blur-3xl" />
