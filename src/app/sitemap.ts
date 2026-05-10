@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://glowlog-ai.vercel.app";
+  const baseUrl = "https://www.glow-log.com";
 
   return [
     {
