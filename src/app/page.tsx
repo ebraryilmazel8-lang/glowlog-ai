@@ -557,6 +557,7 @@ export default function Home() {
                 <li><a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Skincare Guide</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Ingredient Glossary</a></li>
+                    <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
               </ul>
             </div>
 
