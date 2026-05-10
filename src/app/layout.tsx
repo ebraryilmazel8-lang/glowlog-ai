@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Glow Log — Free AI Skincare Analysis & Routine Builder",
   description:
-    "Get a personalized AM/PM skincare routine in 10 seconds from one selfie. Powered by Google Gemini AI. Free first analysis — no app, no quiz, no sign-up. Your photo is never stored.",
+    "Get a personalized AM/PM skincare routine in 10 seconds from one selfie. Powered by Google Gemini AI. Free first analysis — no app, no quiz, no signup.",
   keywords: [
     "AI skin analysis",
     "AI skin analysis free",
@@ -44,6 +45,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SC51B8DXN7"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SC51B8DXN7');
+          `}
+        </Script>
+      </head>
       <body className="antialiased">
         <Navbar />
         <main className="min-h-screen">{children}</main>
