@@ -36,6 +36,9 @@ export const metadata: Metadata = {
     description:
       "Upload a selfie, get a personalized AM/PM routine. Powered by Google Gemini AI. Free, private, no app needed.",
   },
+  verification: {
+    google: "mIowDI_4Vh_dM9ITqHJsdGxV8BwieNSQrnRVHgOvxtk",
+  },
 };
 
 export default function RootLayout({
