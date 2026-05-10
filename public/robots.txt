@@ -1,0 +1,11 @@
+# Glow Log - AI Skincare Analysis
+# https://www.glow-log.com
+
+User-agent: *
+Allow: /
+
+# Block API routes from crawling
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://www.glow-log.com/sitemap.xml
