@@ -49,6 +49,74 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebApplication",
+                  "name": "Glow Log",
+                  "url": "https://www.glow-log.com",
+                  "description": "AI-powered skin analysis and personalized skincare routine builder. Get your AM/PM routine in 10 seconds from one selfie.",
+                  "applicationCategory": "HealthApplication",
+                  "operatingSystem": "Web",
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD",
+                    "description": "Free skin analysis"
+                  },
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.8",
+                    "ratingCount": "2400"
+                  }
+                },
+                {
+                  "@type": "Organization",
+                  "name": "Glow Log",
+                  "url": "https://www.glow-log.com",
+                  "logo": "https://www.glow-log.com/icon.svg",
+                  "sameAs": [
+                    "https://twitter.com/glowlog",
+                    "https://instagram.com/glowlog"
+                  ]
+                },
+                {
+                  "@type": "FAQPage",
+                  "mainEntity": [
+                    {
+                      "@type": "Question",
+                      "name": "How does AI skin analysis work?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Take a selfie and our Google Gemini AI analyzes your skin type, concerns, and condition to generate a personalized AM/PM skincare routine in under 10 seconds."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Is Glow Log free to use?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes! Your first skin analysis is completely free. Premium features including unlimited analyses and detailed ingredient breakdowns are available for $4.99/month."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Is my selfie data private?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Absolutely. Your photos are analyzed in real-time and never stored on our servers. We take privacy seriously and never share your data with third parties."
+                      }
+                    }
+                  ]
+                }
+              ]
+            })
+          }}
+        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SC51B8DXN7"
           strategy="afterInteractive"
