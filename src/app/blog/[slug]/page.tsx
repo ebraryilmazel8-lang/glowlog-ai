@@ -51,6 +51,8 @@ function renderMarkdown(content: string) {
 
   const inlineFormat = (text: string) => {
     return text
+      .replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 underline">$1</a>')
+      .replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2" class="text-purple-400 hover:text-purple-300 underline">$1</a>')
       .replace(/\*\*(.+?)\*\*/g, '<strong class="text-white font-semibold">$1</strong>')
       .replace(/\*(.+?)\*/g, '<em>$1</em>');
   };
