@@ -441,6 +441,242 @@ The general rule is to apply from thinnest to thickest consistency. Serums go be
 Skip the guesswork. Get a free AI skin analysis that identifies your skin type, detects specific concerns, and recommends the right ingredients and products for your unique skin.
     `,
   },
+
+  {
+    slug: "best-vitamin-c-serums",
+    title: "7 Best Vitamin C Serums Under $30 (2026)",
+    description: "Dermatologist-approved vitamin C serums that brighten skin, fade dark spots, and fight aging — all without breaking the bank. Tested and ranked for every skin type.",
+    date: "2026-05-10",
+    readTime: "8 min read",
+    category: "Product Picks",
+    content: `
+## Why Vitamin C Deserves a Spot in Your Routine
+
+Vitamin C is one of the most researched skincare ingredients. It neutralizes free radicals from UV and pollution, boosts collagen production, and fades hyperpigmentation. The catch? Good vitamin C serums can cost $50-$150. But you don't need to spend that much. We've tested dozens of affordable options and narrowed it down to the 7 best under $30.
+
+## What to Look for in a Vitamin C Serum
+
+Before we dive into picks, here's what matters:
+
+**Form of Vitamin C** — L-ascorbic acid is the gold standard (most research, most potent). If your skin is sensitive, look for derivatives like sodium ascorbyl phosphate or ascorbyl glucoside.
+
+**Concentration** — 10-20% is the sweet spot. Below 10% may not be effective; above 20% increases irritation without much extra benefit.
+
+**pH Level** — L-ascorbic acid needs a pH below 3.5 to absorb properly.
+
+**Packaging** — Dark or opaque bottles protect from light degradation. Avoid clear glass.
+
+**Supporting Ingredients** — Vitamin E and ferulic acid boost vitamin C's effectiveness by up to 8x (the famous Duke Antioxidant Patent).
+
+## Our Top 7 Picks
+
+### 1. Timeless 20% Vitamin C + E Ferulic Acid — Best Overall
+**[Buy on Amazon ($25)](https://www.amazon.com/dp/B0036BI56G?tag=glowlog-20)**
+
+This is the cult favorite for good reason. It mimics the SkinCeuticals C E Ferulic formula at a fraction of the price. 20% L-ascorbic acid, 1% vitamin E, and 0.5% ferulic acid in a pH-balanced base.
+
+**Pros:** Effective formula, visible brightening in 2-3 weeks, affordable
+**Cons:** No pump dispenser, oxidizes faster than pricier options
+**Best for:** All skin types, especially those wanting anti-aging benefits
+
+### 2. TruSkin Vitamin C Serum — Best for Beginners
+**[Buy on Amazon ($20)](https://www.amazon.com/dp/B01M4MCUAF?tag=glowlog-20)**
+
+A gentler approach with botanical hyaluronic acid, vitamin E, and witch hazel. The 20% concentration delivers results without the harshness some beginners experience.
+
+**Pros:** Added hyaluronic acid for hydration, pump dispenser, gentle formula
+**Cons:** Contains some botanical extracts that may irritate very sensitive skin
+**Best for:** Beginners, normal to combination skin
+
+### 3. The Ordinary Ascorbic Acid 8% + Alpha Arbutin 2% — Best for Dark Spots
+**[Buy on Amazon ($12)](https://www.amazon.com/dp/B09LRNCVRT?tag=glowlog-20)**
+
+A lower concentration paired with alpha arbutin makes this a dark spot–targeting powerhouse. The water-free formula is stable and layers well.
+
+**Pros:** Ultra-affordable, dual brightening action, stable formula
+**Cons:** Only 8% concentration, slightly oily texture
+**Best for:** Hyperpigmentation, sensitive skin, beginners
+
+### 4. CeraVe Skin Renewing Vitamin C Serum — Best for Sensitive Skin
+**[Buy on Amazon ($18)](https://www.amazon.com/dp/B07RGY75TF?tag=glowlog-20)**
+
+CeraVe wraps 10% L-ascorbic acid in ceramide-rich formula that respects your skin barrier. If other vitamin C serums sting, try this one.
+
+**Pros:** Ceramides protect the barrier, dermatologist-backed, fragrance-free
+**Cons:** Lower concentration (10%), tube packaging is less hygienic
+**Best for:** Sensitive skin, eczema-prone, barrier-compromised skin
+
+### 5. Vichy LiftActiv Vitamin C Serum — Best for Mature Skin
+**[Buy on Amazon ($28)](https://www.amazon.com/dp/B078SQ1NYJ?tag=glowlog-20)**
+
+15% pure vitamin C combined with Vichy's mineralizing water and natural-origin hyaluronic acid. Targets both wrinkles and dullness.
+
+**Pros:** Elegant texture, proven anti-wrinkle results, mineralizing water soothes
+**Cons:** At the top of our budget, smaller bottle (10ml)
+**Best for:** Mature skin, fine lines, dullness
+
+### 6. La Roche-Posay Vitamin C Serum — Best Texture
+**[Buy on Amazon ($28)](https://www.amazon.com/dp/B07WS1TF6G?tag=glowlog-20)**
+
+10% pure vitamin C with salicylic acid and neurosensine. The silky texture absorbs instantly — no sticky residue.
+
+**Pros:** Beautiful lightweight texture, added salicylic acid, fragrance-free
+**Cons:** Only 10%, smaller bottle
+**Best for:** Oily skin, combination skin, those who hate sticky serums
+
+### 7. Neutrogena Rapid Tone Repair Vitamin C Serum — Best Drugstore
+**[Buy on Amazon ($15)](https://www.amazon.com/dp/B09WQ73NH6?tag=glowlog-20)**
+
+Available at any drugstore, this retinol + vitamin C combo attacks dark spots from two angles. Simple, effective, and easy to find.
+
+**Pros:** Widely available, retinol + vitamin C combo, very affordable
+**Cons:** Contains fragrance, retinol may cause purging initially
+**Best for:** Budget shoppers, mild dark spots, anti-aging beginners
+
+## How to Use Vitamin C Serum
+
+For best results, apply vitamin C serum in your morning routine after cleansing and before moisturizer. Here's the ideal order:
+
+1. Cleanser
+2. Toner (optional)
+3. **Vitamin C serum** (wait 1-2 minutes to absorb)
+4. Moisturizer
+5. Sunscreen (SPF 30+, always!)
+
+**Important:** Always use sunscreen with vitamin C. Not because it causes sun sensitivity (it actually provides some UV protection), but because sun exposure counteracts the brightening benefits you're working toward.
+
+## Quick Comparison
+
+| Serum | % | Price | Best For |
+|-------|---|-------|----------|
+| Timeless | 20% | $25 | Overall best |
+| TruSkin | 20% | $20 | Beginners |
+| The Ordinary | 8% | $12 | Dark spots |
+| CeraVe | 10% | $18 | Sensitive skin |
+| Vichy | 15% | $28 | Mature skin |
+| La Roche-Posay | 10% | $28 | Best texture |
+| Neutrogena | N/A | $15 | Drugstore pick |
+
+*Prices and availability may change. As an Amazon Associate, GlowLog earns from qualifying purchases.*
+
+**Not sure which serum is right for you?** Try our [AI Skin Analysis](/analyze) — it analyzes your skin type, identifies concerns, and recommends the perfect vitamin C serum for your unique needs.
+    `,
+  },
+  {
+    slug: "best-moisturizers-for-dry-skin",
+    title: "10 Best Moisturizers for Dry Skin in 2026",
+    description: "From drugstore gems to dermatologist favorites, these are the most hydrating moisturizers for dry, flaky, and dehydrated skin — tested and ranked.",
+    date: "2026-05-09",
+    readTime: "7 min read",
+    category: "Product Picks",
+    content: `
+## Why Dry Skin Needs the Right Moisturizer
+
+Dry skin isn't just uncomfortable — it's a sign that your skin barrier isn't functioning properly. A cracked barrier lets moisture escape and irritants in, leading to flakiness, tightness, redness, and even premature aging. The right moisturizer doesn't just add water to your skin — it repairs the barrier and locks moisture in.
+
+## Key Ingredients for Dry Skin
+
+When shopping for a moisturizer, look for these proven hydrators:
+
+**Ceramides** — The building blocks of your skin barrier. They fill gaps between skin cells like mortar between bricks.
+
+**Hyaluronic Acid** — Holds up to 1000x its weight in water, pulling moisture from the environment into your skin.
+
+**Glycerin** — A humectant that attracts water. Found in nearly every effective moisturizer.
+
+**Squalane** — A lightweight oil that mimics your skin's natural sebum. Hydrates without clogging pores.
+
+**Shea Butter** — An emollient that softens and smooths. Best for very dry or body skin.
+
+## Our Top 10 Picks
+
+### 1. CeraVe Moisturizing Cream — Best Overall
+**[Buy on Amazon ($16)](https://www.amazon.com/dp/B00TTD9BRC?tag=glowlog-20)**
+
+The cult classic. Three essential ceramides, hyaluronic acid, and MVE technology for 24-hour sustained hydration. Fragrance-free, non-comedogenic, and dermatologist-recommended.
+
+**Best for:** All dry skin types, eczema-prone skin
+
+### 2. Vanicream Moisturizing Skin Cream — Best for Sensitive + Dry
+**[Buy on Amazon ($14)](https://www.amazon.com/dp/B000NWGCZ2?tag=glowlog-20)**
+
+Zero fragrance, zero dyes, zero lanolin, zero parabens. If your skin reacts to everything, Vanicream is the safe harbor. Thick and deeply hydrating.
+
+**Best for:** Extremely sensitive skin, dermatitis, rosacea
+
+### 3. La Roche-Posay Lipikar Balm AP+M — Best for Body + Face
+**[Buy on Amazon ($20)](https://www.amazon.com/dp/B09KCWMFWC?tag=glowlog-20)**
+
+Triple repair formula with shea butter, niacinamide, and glycerin. Originally formulated for eczema-prone skin but works beautifully as a rich face cream in winter.
+
+**Best for:** Very dry skin, eczema, winter skincare
+
+### 4. Neutrogena Hydro Boost Water Gel — Best Lightweight Option
+**[Buy on Amazon ($18)](https://www.amazon.com/dp/B00NR1YQHM?tag=glowlog-20)**
+
+Proof that dry skin doesn't need a heavy cream. This hyaluronic acid gel-cream provides serious hydration in a weightless texture. Oil-free and non-comedogenic.
+
+**Best for:** Dry skin that doesn't want a heavy feel, under makeup
+
+### 5. First Aid Beauty Ultra Repair Cream — Best for Cracked Skin
+**[Buy on Amazon ($24)](https://www.amazon.com/dp/B0071OQXLG?tag=glowlog-20)**
+
+Colloidal oatmeal, shea butter, and eucalyptus oil. This thick balm rescues severely cracked, windburned, or chapped skin fast. A winter essential.
+
+**Best for:** Severe dryness, cracked skin, post-procedure healing
+
+### 6. Aveeno Calm + Restore Oat Gel Moisturizer — Best Gel Cream
+**[Buy on Amazon ($16)](https://www.amazon.com/dp/B086LXHBZL?tag=glowlog-20)**
+
+Prebiotic oat formula that calms while hydrating. The gel texture absorbs fast and layers beautifully under SPF. Fragrance-free.
+
+**Best for:** Dry + sensitive skin, reactive skin, minimal routines
+
+### 7. Eucerin Original Healing Cream — Best Budget Pick
+**[Buy on Amazon ($11)](https://www.amazon.com/dp/B001FB5INI?tag=glowlog-20)**
+
+No frills, no hype — just proven hydration. This thick, protective cream has been a dermatologist staple for decades. Ideal for extremely dry patches.
+
+**Best for:** Extreme dryness, budget-conscious shoppers
+
+### 8. Aquaphor Healing Ointment — Best Occlusive
+**[Buy on Amazon ($12)](https://www.amazon.com/dp/B006IB5T4W?tag=glowlog-20)**
+
+Not technically a moisturizer — it's an occlusive that seals in everything underneath. The "slugging" favorite. Apply a thin layer over your moisturizer at night.
+
+**Best for:** Slugging, overnight barrier repair, cracked lips and cuticles
+
+### 9. The Ordinary Natural Moisturizing Factors + HA — Best Minimalist
+**[Buy on Amazon ($10)](https://www.amazon.com/dp/B078K1V4MY?tag=glowlog-20)**
+
+Amino acids, ceramides, hyaluronic acid, and phospholipids in a no-nonsense formula. At $10 for 100ml, it's one of the best value moisturizers on the market.
+
+**Best for:** Minimalists, layering routines, budget shoppers
+
+### 10. Kiehl's Ultra Facial Cream — Best Everyday Cream
+**[Buy on Amazon ($26)](https://www.amazon.com/dp/B003OQUMHO?tag=glowlog-20)**
+
+Squalane and glacial glycoprotein provide 24-hour hydration with a non-greasy finish. Absorbs quickly and works under makeup.
+
+**Best for:** Daily use, under makeup, all seasons
+
+## How to Maximize Your Moisturizer
+
+Getting the most out of your moisturizer is about timing and layering:
+
+**Apply to damp skin** — Within 60 seconds of cleansing. Damp skin absorbs moisturizer better and helps trap water.
+
+**Layer correctly** — Thinnest to thickest. Serum → moisturizer → oil (optional) → sunscreen (AM).
+
+**Don't skip at night** — Your skin repairs itself during sleep. A richer cream at night supports this process.
+
+**Consider slugging** — Apply a thin layer of Aquaphor over your moisturizer 2-3x per week for extreme repair.
+
+*Prices and availability may change. As an Amazon Associate, GlowLog earns from qualifying purchases.*
+
+**Want a personalized moisturizer recommendation?** Try our [AI Skin Analysis](/analyze) — it identifies your exact skin type and hydration needs, then recommends the perfect moisturizer for you.
+    `,
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
