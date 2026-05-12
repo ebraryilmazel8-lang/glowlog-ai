@@ -60,6 +60,30 @@ function renderMarkdown(content: string) {
   while (i < lines.length) {
     const line = lines[i];
 
+    // Handle HTML blocks (tables, divs, etc.)
+    if (line.trim().startsWith("<table")) {
+      flushList();
+      let htmlBlock = line + "\n";
+      i++;
+      while (i < lines.length && !lines[i].includes("</table>")) {
+        htmlBlock += lines[i] + "\n";
+        i++;
+      }
+      if (i < lines.length) {
+        htmlBlock += lines[i];
+        i++;
+      }
+      const styledHtml = `<style>.blog-tbl table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem}.blog-tbl th,.blog-tbl td{padding:0.75rem 1rem;text-align:left;border:1px solid rgba(139,92,246,0.25)}.blog-tbl th{background:rgba(139,92,246,0.15);color:#c4b5fd;font-weight:600;text-transform:uppercase;font-size:0.8rem;letter-spacing:0.05em}.blog-tbl td{color:#d1d5db}.blog-tbl tr:nth-child(even) td{background:rgba(255,255,255,0.03)}.blog-tbl tr:hover td{background:rgba(139,92,246,0.08)}</style><div class="blog-tbl">${htmlBlock}</div>`;
+      elements.push(
+        <div
+          key={`html-${i}`}
+          className="my-6 overflow-x-auto rounded-lg"
+          dangerouslySetInnerHTML={{ __html: styledHtml }}
+        />
+      );
+      continue;
+    }
+
     if (line.startsWith("## ")) {
       flushList();
       elements.push(
