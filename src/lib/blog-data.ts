@@ -75,7 +75,7 @@ Building the perfect routine is easier when you have the right products. Here ar
 
 *Prices and availability may change. As an Amazon Associate, GlowLog earns from qualifying purchases.*
 
-**Ready to get your personalized routine?** Try our [AI Skin Analysis](/analyze) — it analyzes your skin
+**Ready to get your personalized routine?** Try our [AI Skin Analysis](/analyze) — it analyzes your skin type and recommends the perfect products matched to your budget.
     `,
   },
   {
@@ -162,7 +162,7 @@ Now that you know your skin type, here are products that work best for each:
 
 *Prices and availability may change. As an Amazon Associate, GlowLog earns from qualifying purchases.*
 
-**Not sure about your skin type?** Our [AI Skin Analysis](/analyze) iden
+**Not sure about your skin type?** Our [AI Skin Analysis](/analyze) identifies your exact skin type and recommends the perfect products for you.
     `,
   },
   {
@@ -251,7 +251,7 @@ Finding the right products with these powerhouse ingredients doesn't have to be 
 
 *Prices and availability may change. As an Amazon Associate, GlowLog earns from qualifying purchases.*
 
-**Want personalized ingredient recommendations?** Try our [AI Skin Analysis](/analyze) — it a
+**Want personalized ingredient recommendations?** Try our [AI Skin Analysis](/analyze) — it analyzes your skin and recommends the best ingredients for your specific concerns.
     `,
   },
 
@@ -360,15 +360,20 @@ For best results, apply vitamin C serum in your morning routine after cleansing 
 
 ## Quick Comparison
 
-| Serum | % | Price | Best For |
-|-------|---|-------|----------|
-| Timeless | 20% | $25 | Overall best |
-| TruSkin | 20% | $20 | Beginners |
-| The Ordinary | 8% | $12 | Dark spots |
-| CeraVe | 10% | $18 | Sensitive skin |
-| Vichy | 15% | $28 | Mature skin |
-| La Roche-Posay | 10% | $28 | Best texture |
-| Neutrogena | N/A | $15 | Drugstore pick |
+<table>
+<thead>
+<tr><th>Serum</th><th>%</th><th>Price</th><th>Best For</th></tr>
+</thead>
+<tbody>
+<tr><td>Timeless</td><td>20%</td><td>$25</td><td>Overall best</td></tr>
+<tr><td>TruSkin</td><td>20%</td><td>$20</td><td>Beginners</td></tr>
+<tr><td>The Ordinary</td><td>8%</td><td>$12</td><td>Dark spots</td></tr>
+<tr><td>CeraVe</td><td>10%</td><td>$18</td><td>Sensitive skin</td></tr>
+<tr><td>Vichy</td><td>15%</td><td>$28</td><td>Mature skin</td></tr>
+<tr><td>La Roche-Posay</td><td>10%</td><td>$28</td><td>Best texture</td></tr>
+<tr><td>Neutrogena</td><td>N/A</td><td>$15</td><td>Drugstore pick</td></tr>
+</tbody>
+</table>
 
 *Prices and availability may change. As an Amazon Associate, GlowLog earns from qualifying purchases.*
 
@@ -490,7 +495,314 @@ Getting the most out of your moisturizer is about timing and layering:
 **Want a personalized moisturizer recommendation?** Try our [AI Skin Analysis](/analyze) — it identifies your exact skin type and hydration needs, then recommends the perfect moisturizer for you.
     `,
   },
+  {
+    slug: "best-sunscreens-for-oily-skin",
+    title: "7 Best Sunscreens for Oily Skin That Won't Leave You Greasy (2026)",
+    description: "Finding a sunscreen that doesn't turn oily skin into a grease slick is tough. We tested dozens to find the 7 best lightweight, mattifying SPFs for oily and acne-prone skin.",
+    date: "2026-05-12",
+    readTime: "7 min read",
+    category: "Product Guides",
+    content: `
+## Why Oily Skin Still Needs Sunscreen
 
+Let's get this out of the way: skipping sunscreen because your skin is oily is not an option. UV radiation causes premature aging, hyperpigmentation, and increases skin cancer risk regardless of skin type. The real challenge is finding a formula that controls shine rather than adding to it.
+
+The good news is that sunscreen technology has come a long way. Modern formulas designed for oily skin use mattifying agents, lightweight textures, and oil-absorbing ingredients that actually help control shine throughout the day.
+
+## What to Look for in a Sunscreen for Oily Skin
+
+**Texture matters most.** Look for gel, fluid, or water-based formulas rather than thick creams. The words "lightweight," "oil-free," and "non-comedogenic" on the label are your friends.
+
+**Chemical vs. mineral.** Chemical sunscreens (avobenzone, octinoxate, homosalate) tend to absorb better and feel lighter on oily skin. Mineral sunscreens (zinc oxide, titanium dioxide) can feel heavier but newer micronized formulas have solved the white cast problem. If you have acne-prone skin, mineral sunscreens are generally less irritating.
+
+**Mattifying ingredients.** Silica, niacinamide, and dimethicone help absorb excess oil and create a matte finish. Some sunscreens double as primers, giving you a smooth base for makeup.
+
+**SPF 30 minimum.** SPF 30 blocks about 97 percent of UVB rays. SPF 50 blocks about 98 percent. The difference is small, so SPF 30 is perfectly adequate for daily use as long as you apply enough and reapply every two hours when outdoors.
+
+## Our Top 7 Picks
+
+### 1. EltaMD UV Clear Broad-Spectrum SPF 46
+
+The dermatologist favorite for good reason. This lightweight formula contains niacinamide to calm inflammation and control oil, plus hyaluronic acid for lightweight hydration. It works beautifully under makeup and never pills.
+
+**Best for:** Oily and acne-prone skin that needs calming ingredients
+**[Check price on Amazon](https://www.amazon.com/dp/B002MSN3QQ?tag=glowlog-20)**
+
+### 2. La Roche-Posay Anthelios Light Fluid SPF 50+
+
+Ultra-lightweight fluid texture that feels like water on skin. Uses Cell-Ox Shield technology for broad-spectrum protection without any greasy residue. The matte finish lasts for hours.
+
+**Best for:** Very oily skin that needs maximum mattification
+**[Check price on Amazon](https://www.amazon.com/dp/B07GCS4LT3?tag=glowlog-20)**
+
+### 3. Supergoop! Unseen Sunscreen SPF 40
+
+This cult favorite goes on completely clear with a velvety, primer-like finish. It is oil-free, fragrance-free, and works as an excellent makeup base. The packaging is also travel-friendly.
+
+**Best for:** Anyone who wants an invisible, primer-like sunscreen
+**[Check price on Amazon](https://www.amazon.com/dp/B0B5HM4YNY?tag=glowlog-20)**
+
+### 4. Biore UV Aqua Rich Watery Essence SPF 50+
+
+A Japanese sunscreen legend. The watery, gel-like texture absorbs instantly and leaves a barely-there finish. It contains hyaluronic acid for hydration without heaviness. Affordable and widely available.
+
+**Best for:** Budget-conscious buyers who want Japanese sunscreen technology
+**[Check price on Amazon](https://www.amazon.com/dp/B0BRTJXJKL?tag=glowlog-20)**
+
+### 5. Neutrogena Ultra Sheer Dry-Touch SPF 55
+
+The drugstore champion. Dry-touch technology creates a matte, non-shiny finish that holds up well throughout the day. Affordable enough to reapply generously without guilt.
+
+**Best for:** Budget-friendly daily protection with true matte finish
+**[Check price on Amazon](https://www.amazon.com/dp/B005IHT94E?tag=glowlog-20)**
+
+### 6. Paula's Choice Extra Care Non-Greasy Sunscreen SPF 50
+
+Formulated with antioxidants and skin-soothing ingredients alongside broad-spectrum protection. The non-greasy formula lives up to its name, absorbing quickly without leaving residue.
+
+**Best for:** Oily skin that wants anti-aging benefits built into sun protection
+**[Check price on Amazon](https://www.amazon.com/dp/B003WN1ELQ?tag=glowlog-20)**
+
+### 7. CeraVe Hydrating Mineral Sunscreen SPF 30
+
+A mineral option with zinc oxide that doesn't leave the dreaded white cast on most skin tones. Contains ceramides to support the skin barrier and niacinamide to help control oil. Fragrance-free and gentle enough for sensitive, oily skin.
+
+**Best for:** Sensitive oily skin that needs mineral protection
+**[Check price on Amazon](https://www.amazon.com/dp/B07GCZJG15?tag=glowlog-20)**
+
+## How to Apply Sunscreen on Oily Skin
+
+The two-finger rule is the easiest way to measure the right amount for your face. Squeeze a line of sunscreen along your index and middle fingers from base to tip. That is approximately the correct amount for full face and neck coverage.
+
+Apply sunscreen as the last step in your skincare routine, after moisturizer. Wait two to three minutes before applying makeup to let it set. If you find sunscreen makes your skin even oilier by midday, try applying a mattifying primer on top, or use blotting papers to absorb excess oil without disturbing the sunscreen layer.
+
+## The Bottom Line
+
+The best sunscreen for oily skin is the one you will actually wear every day. All seven picks on this list are lightweight, non-greasy, and designed specifically for oily skin types. Start with the one that fits your budget and preferences, and commit to daily use.
+
+*Prices and availability may change. As an Amazon Associate, GlowLog earns from qualifying purchases.*
+
+**Not sure which sunscreen is right for your skin?** Try our [AI Skin Analysis](/analyze) — it evaluates your skin type and concerns, then recommends products matched to your budget and climate.
+    `,
+  },
+  {
+    slug: "retinol-beginners-guide",
+    title: "Retinol for Beginners: Everything You Need to Know Before Starting",
+    description: "Retinol is the most proven anti-aging ingredient, but using it wrong can wreck your skin. This beginner's guide covers how to start, what to expect, and common mistakes to avoid.",
+    date: "2026-05-12",
+    readTime: "8 min read",
+    category: "Ingredients",
+    content: `
+## What Is Retinol and Why Does Everyone Recommend It
+
+Retinol is a form of vitamin A and belongs to a family of compounds called retinoids. It is the most studied and evidence-backed anti-aging ingredient available without a prescription. Decades of clinical research confirm that retinol increases cell turnover, stimulates collagen production, fades dark spots, unclogs pores, and smooths fine lines.
+
+The reason dermatologists universally recommend it is simple: nothing else available over the counter does as much for aging skin. It essentially tells your skin cells to behave like younger, healthier cells.
+
+## Retinol vs. Retinal vs. Tretinoin: What Is the Difference
+
+All retinoids follow a conversion pathway in your skin. Your skin converts retinol to retinal (retinaldehyde), then to retinoic acid (tretinoin), which is the active form that actually changes your skin.
+
+**Retinol** is the most common over-the-counter form. It is gentler because it requires two conversion steps before becoming active. Good for beginners.
+
+**Retinal (retinaldehyde)** requires only one conversion step, so it works faster than retinol but is still gentler than prescription tretinoin. A solid middle ground.
+
+**Tretinoin** is prescription-strength retinoic acid. It works immediately with no conversion needed, making it the most potent but also the most irritating. Only available through a dermatologist.
+
+**Adapalene (Differin)** is technically a retinoid designed specifically for acne. It is available over the counter in the US and is less irritating than tretinoin while still being very effective for breakouts.
+
+## How to Start Using Retinol Without Destroying Your Skin
+
+The golden rule of retinol is **start low, go slow.** Here is a safe introduction schedule:
+
+**Weeks 1-2:** Apply a low-concentration retinol (0.25 percent or 0.3 percent) once per week only. Use it at night after cleansing, wait for skin to be completely dry, then apply a pea-sized amount to your entire face, avoiding the eye area and corners of your nose and mouth.
+
+**Weeks 3-4:** Increase to twice per week if you experienced no irritation. If you had redness or flaking, stay at once per week for another two weeks.
+
+**Weeks 5-8:** Increase to every other night. Your skin should be adjusting at this point, but some mild flaking is normal.
+
+**After 8 weeks:** You can try using retinol every night if your skin tolerates it. Some people can use it nightly; others find every other night is their sweet spot long-term.
+
+## The Retinol Sandwich Method
+
+If you have sensitive skin, the sandwich method reduces irritation dramatically. Apply moisturizer first, wait five minutes, apply retinol, wait five minutes, apply another layer of moisturizer. The moisturizer layers buffer the retinol and slow its absorption, reducing the chance of irritation while still letting it work.
+
+## What to Expect: The Retinol Ugly Phase
+
+Almost everyone goes through a retinization period during the first four to eight weeks. Your skin may become dry, flaky, red, or even break out more than usual. This is called the "retinol uglies" or "purging" and it is normal.
+
+**Purging vs. a bad reaction:** Purging causes breakouts in areas where you normally get acne, and each individual breakout heals faster than usual. If you are breaking out in entirely new areas or the breakouts are severe and persistent, that is a reaction, not purging, and you should stop and consult a dermatologist.
+
+The retinization phase is temporary. Push through it (slowly and gently) and you will come out the other side with clearer, smoother, more radiant skin.
+
+## Retinol Mistakes That Will Wreck Your Skin
+
+**Using too much.** A pea-sized amount covers your entire face. More does not equal better results, it just equals more irritation.
+
+**Starting too strong.** Jumping straight to a 1 percent retinol serum when you have never used retinoids before is asking for a damaged skin barrier. Start at 0.25 percent or 0.3 percent.
+
+**Skipping sunscreen.** Retinol makes your skin more sensitive to UV radiation. Using retinol without daily SPF 30+ is like taking two steps forward and three steps back. Sunscreen is mandatory.
+
+**Mixing with other actives too soon.** Do not use retinol on the same night as AHAs (glycolic acid, lactic acid), BHAs (salicylic acid), or vitamin C until your skin is fully adjusted. These combinations can cause significant irritation for beginners.
+
+**Applying to wet skin.** Always apply retinol to completely dry skin. Water increases absorption and can amplify irritation. Wait at least 20 minutes after washing your face.
+
+## Best Retinol Products for Beginners
+
+### Budget-Friendly
+
+- **[The Ordinary Retinol 0.2% in Squalane](https://www.amazon.com/dp/B07L8MZCVG?tag=glowlog-20)** — Affordable starting point with squalane for hydration. A great first retinol.
+- **[CeraVe Resurfacing Retinol Serum](https://www.amazon.com/dp/B07RQHZKFB?tag=glowlog-20)** — Contains ceramides to protect the skin barrier while retinol works. Fragrance-free.
+
+### Mid-Range
+
+- **[Paula's Choice Clinical 1% Retinol Treatment](https://www.amazon.com/dp/B07L1QV8DZ?tag=glowlog-20)** — For when you are ready to graduate to a higher concentration. Elegant formula with peptides.
+- **[Neutrogena Rapid Wrinkle Repair Retinol Cream](https://www.amazon.com/dp/B004D2C5PA?tag=glowlog-20)** — Stabilized retinol in a moisturizing base. Widely available and reliable.
+
+### Premium
+
+- **[SkinCeuticals Retinol 0.3](https://www.amazon.com/dp/B001G7PFJW?tag=glowlog-20)** — Pharmaceutical-grade retinol in a stabilized formula. Comes in 0.3, 0.5, and 1.0 concentrations for progressive use.
+
+## How Long Until You See Results
+
+Retinol is not an overnight miracle. Realistic timelines:
+
+- **2-4 weeks:** Smoother skin texture
+- **4-8 weeks:** Reduced breakouts, pores appear smaller
+- **8-12 weeks:** Visible improvement in fine lines and dark spots
+- **6-12 months:** Significant improvement in overall skin quality, firmness, and tone
+
+Consistency is everything. Using retinol sporadically will not produce results. Commit to your schedule and be patient.
+
+*Prices and availability may change. As an Amazon Associate, GlowLog earns from qualifying purchases.*
+
+**Want to know if retinol is right for your skin concerns?** Try our [AI Skin Analysis](/analyze) — it evaluates your skin and recommends the right actives and products for your goals.
+    `,
+  },
+  {
+    slug: "skincare-routine-for-acne",
+    title: "The Complete Skincare Routine for Acne-Prone Skin (Dermatologist-Approved)",
+    description: "Struggling with acne? This evidence-based routine guide covers the best cleansers, treatments, and moisturizers for acne-prone skin, plus common mistakes that make breakouts worse.",
+    date: "2026-05-12",
+    readTime: "8 min read",
+    category: "Routines",
+    content: `
+## Understanding Acne Before You Treat It
+
+Acne happens when dead skin cells, excess oil, and bacteria clog your pores. But not all acne is the same, and understanding what type you have determines which treatments will actually work.
+
+**Comedonal acne** consists of blackheads and whiteheads. These are non-inflamed clogged pores that respond well to exfoliating acids like salicylic acid and retinoids.
+
+**Inflammatory acne** includes red, swollen papules and pustules. These need anti-inflammatory and antibacterial ingredients like benzoyl peroxide and niacinamide.
+
+**Cystic acne** involves deep, painful nodules under the skin. This is the most severe form and often requires prescription treatment from a dermatologist. Over-the-counter products alone rarely resolve cystic acne.
+
+## The Acne-Fighting Morning Routine
+
+### Step 1: Gentle Cleanser
+
+This is where most people go wrong. When you have acne, the instinct is to use the harshest cleanser possible to strip away oil. This actually makes acne worse because it damages your skin barrier, causing your skin to produce even more oil to compensate.
+
+Use a gentle, pH-balanced cleanser. Foaming or gel textures work well for oily, acne-prone skin without over-stripping.
+
+**Top picks:**
+- **[CeraVe Foaming Facial Cleanser](https://www.amazon.com/dp/B01N1LL62W?tag=glowlog-20)** — Gentle foaming formula with ceramides and niacinamide
+- **[La Roche-Posay Toleriane Purifying Foaming Cleanser](https://www.amazon.com/dp/B01N7T7JKJ?tag=glowlog-20)** — Fragrance-free, removes excess oil without stripping
+
+### Step 2: Treatment Serum
+
+In the morning, niacinamide is your best friend. It reduces inflammation, controls oil production, minimizes pore appearance, and strengthens the skin barrier. All without making your skin sensitive to the sun.
+
+**Top pick:**
+- **[The Ordinary Niacinamide 10% + Zinc 1%](https://www.amazon.com/dp/B06VSJ3B6C?tag=glowlog-20)** — Budget-friendly, effective oil control and pore refinement
+
+### Step 3: Lightweight Moisturizer
+
+Yes, even acne-prone skin needs moisturizer. A healthy skin barrier heals acne faster and prevents the overproduction of oil that comes from dehydrated skin. Choose oil-free, non-comedogenic formulas.
+
+**Top picks:**
+- **[Neutrogena Hydro Boost Gel-Cream](https://www.amazon.com/dp/B00NR1YQHM?tag=glowlog-20)** — Oil-free, hyaluronic acid-based hydration
+- **[CeraVe PM Facial Moisturizing Lotion](https://www.amazon.com/dp/B00365DABC?tag=glowlog-20)** — Lightweight with niacinamide and ceramides
+
+### Step 4: Sunscreen
+
+Non-negotiable. Many acne treatments (retinoids, AHAs, BHAs, benzoyl peroxide) increase sun sensitivity. Unprotected sun exposure also causes post-inflammatory hyperpigmentation, those dark marks left behind after a pimple heals.
+
+**Top pick:**
+- **[EltaMD UV Clear SPF 46](https://www.amazon.com/dp/B002MSN3QQ?tag=glowlog-20)** — Contains niacinamide, designed specifically for acne-prone skin
+
+## The Acne-Fighting Evening Routine
+
+### Step 1: Double Cleanse
+
+If you wear sunscreen (and you should), double cleansing ensures you remove it completely. Start with a micellar water or oil cleanser, then follow with your regular gentle cleanser.
+
+**Top pick for first cleanse:**
+- **[Bioderma Sensibio H2O Micellar Water](https://www.amazon.com/dp/B002XZLAWM?tag=glowlog-20)** — Gentle, effective makeup and sunscreen removal
+
+### Step 2: Active Treatment
+
+This is where the heavy hitters come in. Alternate between these treatments on different nights:
+
+**Benzoyl Peroxide (2-3 nights per week):** Kills acne-causing bacteria on contact. Start with 2.5 percent concentration, which is just as effective as 10 percent but far less irritating. Apply a thin layer to acne-prone areas.
+
+**Salicylic Acid (2-3 nights per week):** A BHA that penetrates into pores to dissolve the oil and dead skin plugs that cause blackheads and whiteheads. Use as a toner or leave-on treatment.
+
+**Retinol (1-2 nights per week, once adjusted):** Increases cell turnover to prevent pores from clogging and fades acne scars. Start slowly and build up tolerance.
+
+**Important:** Never use benzoyl peroxide and retinol on the same night. They deactivate each other. Alternate nights.
+
+**Top treatment picks:**
+- **[Paula's Choice 2% BHA Liquid Exfoliant](https://www.amazon.com/dp/B00949CTQQ?tag=glowlog-20)** — Salicylic acid gold standard for unclogging pores
+- **[Neutrogena On-the-Spot Acne Treatment (2.5% BP)](https://www.amazon.com/dp/B00MMKAM3E?tag=glowlog-20)** — Low-strength benzoyl peroxide that minimizes irritation
+- **[The Ordinary Retinol 0.2% in Squalane](https://www.amazon.com/dp/B07L8MZCVG?tag=glowlog-20)** — Gentle starter retinol
+
+### Step 3: Moisturizer
+
+Same as morning, but you can use a slightly richer formula at night since you are not layering sunscreen on top.
+
+## A Sample Weekly Schedule
+
+<table>
+<thead>
+<tr><th>Night</th><th>Treatment</th></tr>
+</thead>
+<tbody>
+<tr><td>Monday</td><td>Salicylic Acid</td></tr>
+<tr><td>Tuesday</td><td>Benzoyl Peroxide</td></tr>
+<tr><td>Wednesday</td><td>Retinol</td></tr>
+<tr><td>Thursday</td><td>Salicylic Acid</td></tr>
+<tr><td>Friday</td><td>Benzoyl Peroxide</td></tr>
+<tr><td>Saturday</td><td>Rest (moisturizer only)</td></tr>
+<tr><td>Sunday</td><td>Retinol</td></tr>
+</tbody>
+</table>
+
+Adjust this schedule based on what your skin can tolerate. If you experience excessive dryness or irritation, reduce the frequency of all actives.
+
+## Mistakes That Make Acne Worse
+
+**Over-cleansing.** Washing your face more than twice a day or using harsh scrubs strips the skin barrier and triggers more oil production. Gentle is always better.
+
+**Popping pimples.** Squeezing pimples pushes bacteria deeper into the skin, causes inflammation, and dramatically increases the risk of scarring. Leave them alone or use a pimple patch.
+
+**Using too many products at once.** Introducing multiple actives simultaneously makes it impossible to know what is working, what is irritating your skin, and what is causing new breakouts. Add one product at a time and wait two weeks before adding another.
+
+**Skipping moisturizer.** Dehydrated skin produces more oil, which causes more acne. Always moisturize, even if it feels counterintuitive.
+
+**Inconsistency.** Acne treatment takes 6 to 12 weeks to show significant results. Switching products every week because you do not see immediate improvement guarantees you will never see results.
+
+## When to See a Dermatologist
+
+If your acne has not improved after 8 to 12 weeks of consistent over-the-counter treatment, or if you have painful cystic acne, it is time to see a dermatologist. Prescription options like tretinoin, topical antibiotics, spironolactone, or isotretinoin (Accutane) can make a dramatic difference for stubborn acne.
+
+There is no shame in needing prescription treatment. Some acne is hormonal or genetic and simply does not respond to over-the-counter products.
+
+*Prices and availability may change. As an Amazon Associate, GlowLog earns from qualifying purchases.*
+
+**Want a personalized acne routine?** Try our [AI Skin Analysis](/analyze) — it identifies your specific acne type and recommends targeted treatments matched to your budget.
+    `,
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
