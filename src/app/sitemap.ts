@@ -70,5 +70,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "monthly",
             priority: 0.7,
     },
+    {
+            url: \`\${baseUrl}/blog/best-sunscreens-for-oily-skin\`,
+            lastModified: new Date("2026-05-12"),
+            changeFrequency: "monthly",
+            priority: 0.7,
+    },
+    {
+            url: \`\${baseUrl}/blog/retinol-beginners-guide\`,
+            lastModified: new Date("2026-05-12"),
+            changeFrequency: "monthly",
+            priority: 0.7,
+    },
+    {
+            url: \`\${baseUrl}/blog/skincare-routine-for-acne\`,
+            lastModified: new Date("2026-05-12"),
+            changeFrequency: "monthly",
+            priority: 0.7,
+    },
       ];
 }
